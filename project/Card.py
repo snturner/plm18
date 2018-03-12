@@ -2,8 +2,8 @@ class Card:
     up = True
     down = False
 
-    VALUES = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]
-    SUITS = ["SP", "C", "H", "D"]
+    VALUES = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "JACK", "QUEEN", "KING", "ACE"]
+    SUITS = ["SPADES", "CLUBS", "HEARTS", "DIAMONDS"]
 
     def __init__(self, value, suit, face = down, faceCard = False):
         self.value = value
@@ -12,9 +12,29 @@ class Card:
         self.faceCard = faceCard
 
     def string(self):
-        cardValue = self.value
-        cardSuit = self.suit
-        return cardValue + cardSuit
+        cardValue = ""
+        cardSuit = ""
+        if self.suit == 0:
+            cardSuit = Card.SUITS[0]
+            for c in range(0,13):
+                if self.value == c:
+                    cardValue = Card.VALUES[c]
+        elif self.suit == 1:
+            cardSuit = Card.SUITS[1]
+            for c in range(0,13):
+                if self.value == c:
+                    cardValue = Card.VALUES[c]
+        elif self.suit == 2:
+            cardSuit = Card.SUITS[2]
+            for c in range(0,13):
+                if self.value == c:
+                    cardValue = Card.VALUES[c]
+        elif self.suit == 3:
+            cardSuit = Card.SUITS[3]
+            for c in range(0,13):
+                if self.value == c:
+                    cardValue = Card.VALUES[c]
+        return cardValue + ' of ' + cardSuit 
 
     def isFaceCard(self):
         faceList = [10, 11, 12]

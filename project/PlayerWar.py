@@ -1,11 +1,9 @@
 from random import shuffle
-import Hand
-import Card
+from Card import Card
 
 class PlayerWar:
-    Hand hand
 
-	def __init__(self, hand)
+	def __init__(self):
 		self.hand = []
 
     # def Card playCard():
