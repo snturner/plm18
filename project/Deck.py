@@ -17,4 +17,8 @@ class Deck:
                 ## for x, 1 - SP, 2 - C, 3 - H, 4 - D
                 decklist[y + x] = Card(y + 1, x + 1, self.down, True)
   
+    def dealCardsWar():
+        # deal out cards to players
 
+    def dealCardsBartok():
+        # deal out cards to players
