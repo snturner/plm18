@@ -12,7 +12,8 @@ class Dealer:
         for p in players:
             p.hand = deck.cards[:6]
             deck = deck.cards[6:]
-def Card deal1Card():
+
+    def deal1Card():
         cardToDeal = deck.cards[0]
         deck = deck.cards[1:]
         return cardToDeal
