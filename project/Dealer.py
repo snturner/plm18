@@ -1,12 +1,13 @@
+from Deck import Deck
 class Dealer:
-    Deck deck
+    deck = Deck()
     
     def dealWar(self, player1, player2):
-        player1.hand = deck[:25]
-        player2.hand = deck[25:]
+        player1.hand = deck.cards[:25]
+        player2.hand = deck.cards[25:]
     
     def dealBartok(self, players):
         for p in players:
-            p.hand = deck[:6]
-            deck = deck[6:]
+            p.hand = deck.cards[:6]
+            deck = deck.cards[6:]
 

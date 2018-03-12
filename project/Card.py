@@ -16,13 +16,15 @@ class Card:
         cardSuit = self.suit
         return cardValue + cardSuit
 
-    def isFaceCard():
-        if self.faceCard:
-            return True
+    def isFaceCard(self):
+        faceList = [10, 11, 12]
+        for f in faceList:
+            if self.suit == f:
+                return True
+        return False
+
+    def flip(self):
+        if self.face == False:
+            self.face = True
         else:
-            return False
-    def flip():
-        if self.face:
-            self.face = self.up
-        else:
-            self.face = self.down
+            self.face = False
