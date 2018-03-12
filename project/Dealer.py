@@ -1,3 +1,4 @@
+import Deck, Card
 class Dealer:
     Deck deck
     
@@ -9,4 +10,8 @@ class Dealer:
         for p in players:
             p.hand = deck[:6]
             deck = deck[6:]
+    def Card deal1Card():
+        cardToDeal = deck[0]
+        deck = deck[1:]
+        return cardToDeal
 
