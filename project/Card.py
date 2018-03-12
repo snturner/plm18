@@ -7,7 +7,7 @@ class Card:
         self.face = face
         self.faceCard = faceCard
 
-    def __cards__(self):
+    def string(self):
         cardValue = self.value
         cardSuit = self.suit
         return cardValue + cardSuit
