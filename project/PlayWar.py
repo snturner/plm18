@@ -50,6 +50,9 @@ class PlayWar:
             winner = giveCards(p1.hand[0], p2.hand[0], p1, p2)
             return winner
 
+    def cardCheck(player):
+
+
     def __main__():
         
         '''Starts game and shows welcome message and rules'''
@@ -77,5 +80,12 @@ class PlayWar:
             else if winner == 2:
                 for c in cardList:
                     p2.hand = p2.hand + c
+            hasCards = p1 and p2
+        
+        if not p1:
+            print 'Player 2 has won the game!'
+        else if not p2:
+            print 'Player 1 has won the game!'
+
 
 
