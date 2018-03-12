@@ -1,11 +1,14 @@
+import Hand
+
 class PlayerBartok:
-	Hand cardsList
-	DiscardPile pile
-	def __init__(self, cards, cardsList):
+	# DiscardPile pile
+	Hand hand
+	
+	def __init__(self, cards, hand):
 		self.cards = 7
+		self.hand = hand
+		
 	def isDraw(self, cardsList, pile):
-		self.cardsList = pile.top
-		while pile.next != empty?:
-			pile.top = pile.next
+		# ??
 	def turn(self, cardsList, lastCard, pile):
-		...
+		# ...
