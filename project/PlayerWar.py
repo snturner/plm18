@@ -1,12 +1,15 @@
 from random import shuffle
-import HandWar
+import Hand
 import Card
 
-class PlayWar:
+class PlayerWar:
     Hand hand
 
-    def Card playCard():
-        Card cardToPlay = hand[0]
-        hand = hand[1:]
-        return cardToPlay
+	def __init__(self, hand)
+		self.hand = []
+
+    # def Card playCard():
+    #     Card cardToPlay = hand[0]
+    #     hand = hand[1:]
+    #     return cardToPlay
     

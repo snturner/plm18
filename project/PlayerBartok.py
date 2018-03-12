@@ -6,7 +6,7 @@ class PlayerBartok:
 	
 	def __init__(self, cards, hand):
 		self.cards = 7
-		self.hand = hand
+		self.hand = []
 		
 	def isDraw(self, cardsList, pile):
 		# ??
