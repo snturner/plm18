@@ -7,6 +7,11 @@ class Card:
         self.face = face
         self.faceCard = faceCard
 
+    def __cards__(self):
+        cardValue = self.value
+        cardSuit = self.suit
+        return cardValue + cardSuit
+
     def bool isFaceCard():
         if self.faceCard:
             return True
