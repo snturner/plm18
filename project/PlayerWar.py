@@ -3,7 +3,7 @@ import HandWar
 import Card
 
 class PlayWar:
-    Hard hand
+    Hand hand
 
     def Card playCard():
         Card cardToPlay = hand[0]
