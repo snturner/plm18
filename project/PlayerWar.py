@@ -1,9 +1,9 @@
 from random import shuffle
-import Hand
+import HandWar
 import Card
 
 class PlayWar:
-    Hard hand
+    HardWar hand
 
     def Card playCard():
         Card cardToPlay = hand[0]
