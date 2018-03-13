@@ -3,7 +3,7 @@
 from PlayerBartok import PlayerBartok
 from Dealer import Dealer
 from Card import Card
-import PlayerBartok
+from PlayerBartok import PlayerBartok
 from Deck import Deck
 #number of players
 numOfPlayers = 4
@@ -21,13 +21,14 @@ def printPlayerHand(player):
         print(" %(num)d) %(card)s" % {"num": k, "card":cardStr})
         k += 1
 
-def startGame():
+def startGame(players):
     while True:
         for i in range(0, numOfPlayers):
             print()
+            print("----------------------PLAYER %d's TURN----------------------" % (i + 1))
             print("Current card on top: %s" % Card.string(discardList[0]))
             printPlayerHand(players[i])
-            print("Enter desired card position to play (press -1 to draw):")
+            print("Enter desired card position to play (enter -1 to draw):")
             cardnum = int(input())
             if cardnum == -1:
                 print("Player %(num)d draws a card"% {"num": (i + 1)})
@@ -49,6 +50,7 @@ def main():
     print("Rules of Bartok:\n")
     loop = True
     global numOfPlayers
+    global players
     while loop:
         try:
             print("Enter number of players (2 - 6):")
@@ -61,13 +63,13 @@ def main():
             print("Enter a valid number")
 
     for i in range(0, numOfPlayers):
-        players.append(PlayerBartok)
+        players.append(PlayerBartok())
     #deals the cards   
     #d = Dealer()
-    d.dealBartok(players)
+    d.dealBartok(players, numOfPlayers)
     #initlized the discard pile
     discardList.append(d.deal1Card())
-    playernum = startGame()
+    playernum = startGame(players)
     if playernum <= 0:
         print("The game is a tie!")
     else:

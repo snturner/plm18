@@ -4,6 +4,7 @@ class PlayerBartok:
 	def __init__(self):
 		self.x = 2
 		self.hand = []
+		self.players = []
 		
 	def isDraw(self, cardsList, pile):
 		self.x = 3
