@@ -48,6 +48,7 @@ def giveCards(cardP1, cardP2, p1, p2):
             print('-----------------------------------------------------')
             return 2
         else:
+            print('Both players tied!')
             cardList.append(p1.hand[0])
             cardList.append(p1.hand[1])
             cardList.append(p2.hand[0])
@@ -97,11 +98,11 @@ def main():
         hasCards = (len(p1.hand) != 0) and (len(p2.hand) != 0)
         
     if not p1.hand:
+        print('Player 1 has run out of cards!')
         print('Player 2 has won the game!')
-        print('-----------------------------------------------------')
     elif not p2.hand:
+        print('Player 2 has run out of cards!')
         print('Player 1 has won the game!')
-        print('-----------------------------------------------------')
 
 if  __name__ =='__main__':
     main()
