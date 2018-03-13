@@ -24,9 +24,11 @@ def printPlayerHand(player):
 def startGame():
     while True:
         for i in range(0, numOfPlayers):
+            print()
+            print("Current card on top: %s" % Card.string(discardList[0]))
             printPlayerHand(players[i])
-            print(" press -1 to draw")
-            cardnum = int(input("Pick the number of the card to play:"))
+            print("Enter desired card position to play (press -1 to draw):")
+            cardnum = int(input())
             cardPlayed = players[i].hand[(cardnum - 1)]
             if cardnum == -1:
                 print("Player %(num)d draws a card"% {"num": i})
@@ -47,7 +49,8 @@ def main():
     loop = True
     while loop:
         try:
-            numOfPlayers = int(input("How many players are there?"))
+            print("Enter number of players (2 - 6):")
+            numOfPlayers = int(input())
             if numOfPlayers < 2 or numOfPlayers >= 7:
                 print("There must be between 2 - 6 players")
             else:
