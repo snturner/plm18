@@ -48,6 +48,12 @@ def startGame(players):
 
 def main():
     print("Rules of Bartok:\n")
+    print("There must be at least 2 players and at most 6 players.")
+    print("Players play turn-based rounds where one player")
+    print("plays a card from their hand only if that card matches either the")
+    print("value or the suit of the faced-up card and draws a card from ")
+    print("the deck if the player has no matches. Then the next player has a turn.")
+    print("The game is won by the player who has no cards left in their hand.\n")
     loop = True
     global numOfPlayers
     global players
