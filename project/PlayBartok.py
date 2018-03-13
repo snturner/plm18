@@ -15,11 +15,11 @@ discardList = []
 d = Dealer()
 
 def printPlayerHand(player):
-    i = 1
+    k = 1
     for card in player.hand:
         cardStr = Card.string(card)
-        print(" %(num)d) %(card)s" % {"num": i, "card":cardStr})
-        i += 1
+        print(" %(num)d) %(card)s" % {"num": k, "card":cardStr})
+        k += 1
 
 def startGame():
     while True:
@@ -29,16 +29,17 @@ def startGame():
             printPlayerHand(players[i])
             print("Enter desired card position to play (press -1 to draw):")
             cardnum = int(input())
-            cardPlayed = players[i].hand[(cardnum - 1)]
             if cardnum == -1:
-                print("Player %(num)d draws a card"% {"num": i})
+                print("Player %(num)d draws a card"% {"num": (i + 1)})
                 players[i].hand.append(d.deal1Card())
-            elif cardPlayed.value == discardList[0].value or cardPlayed.suit == discardList[0].suit :
-                discardList.insert(0, cardPlayed)
-                del players[i].hand[(cardnum - 1)]
             else:
-                print("Invalid card, Player %(num)d draws a card"% {"num": i})
-                players[i].hand.append(d.deal1Card())
+                cardPlayed = players[i].hand[(cardnum - 1)]
+                if cardPlayed.value == discardList[0].value or cardPlayed.suit == discardList[0].suit:
+                    discardList.insert(0, cardPlayed)
+                    del players[i].hand[(cardnum - 1)]
+                else:
+                    print("Invalid card, Player %(num)d draws a card"% {"num": (i + 1)})
+                    players[i].hand.append(d.deal1Card())
             if(len(players[i].hand) <= 0):
                 return i
             if(len(d.deck.cards) <= 0):
@@ -47,6 +48,7 @@ def startGame():
 def main():
     print("Rules of Bartok:\n")
     loop = True
+    global numOfPlayers
     while loop:
         try:
             print("Enter number of players (2 - 6):")
@@ -65,11 +67,11 @@ def main():
     d.dealBartok(players)
     #initlized the discard pile
     discardList.append(d.deal1Card())
-    playernumm = startGame()
+    playernum = startGame()
     if playernum <= 0:
         print("The game is a tie!")
     else:
-        print("Player " + playernum + " wins")
+        print("Player %d wins!" % playernum)
 
 
 if  __name__ =='__main__':
