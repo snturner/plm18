@@ -42,7 +42,7 @@ def startGame(players):
                     print("Invalid card, Player %(num)d draws a card"% {"num": (i + 1)})
                     players[i].hand.append(d.deal1Card())
             if(len(players[i].hand) <= 0):
-                return i
+                return (i + 1)
             if(len(d.deck.cards) <= 0):
                 return -1
 
