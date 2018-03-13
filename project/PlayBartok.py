@@ -2,6 +2,7 @@
 
 from PlayerBartok import PlayerBartok
 from Dealer import Dealer
+from Card import Card
 import PlayerBartok
 from Deck import Deck
 #number of players
@@ -16,16 +17,8 @@ d = Dealer()
 def printPlayerHand(player):
     i = 1
     for card in player.hand:
-        if card.value < 11:
-            print(" %(num)d) %(value)d %(suit)d" % {"num": i, "value":card.value, "suit":card.suit})
-        if card.value == 11:
-            print(" %(num)d) J %(suit)d" % {"num": i, "suit":card.suit})
-        if card.value == 12:
-            print(" %(num)d) Q %(suit)d" % {"num": i, "suit":card.suit})
-        if card.value == 13:
-            print(" %(num)d) K %(suit)d" % {"num": i, "suit":card.suit})
-        if card.value == 14:
-            print(" %(num)d) A %(suit)d" % {"num": i, "suit":card.suit})
+        cardStr = Card.string(card)
+        print(" %(num)d) %(card)s" % {"num": i, "card":cardStr})
         i += 1
 
 def startGame():
