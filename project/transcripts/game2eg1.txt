@@ -1,0 +1,658 @@
+Welcome to WAR!
+Each player starts with half of a shuffled 52 card deck.
+Players may not look at the cards in their hands.
+Each player pulls one card from the deck and puts it on the table.
+The higher card wins; the player who played it takes both cards and places them on the bottom of his stack.
+Aces are always higher than Kings in this game, but they are often lower than Jokers (if used).
+A "war" occurs when the two players play the same rank (two 9s, for example), making a tie.
+Each player then deals three cards facedown (the spoils are for the winner) and a face-up card.
+The player with the higher face-up card takes all the cards from the war into his stack.
+---------------------ROUND 1---------------------
+Player 1 plays card JACK of HEARTS
+Player 2 plays card 9 of SPADES
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 2---------------------
+Player 1 plays card 2 of HEARTS
+Player 2 plays card 6 of HEARTS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 3---------------------
+Player 1 plays card 5 of DIAMONDS
+Player 2 plays card 8 of DIAMONDS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 4---------------------
+Player 1 plays card ACE of SPADES
+Player 2 plays card ACE of CLUBS
+Both players tied!
+Player 1 plays card 9 of DIAMONDS
+Player 2 plays card 7 of HEARTS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 5---------------------
+Player 1 plays card KING of CLUBS
+Player 2 plays card QUEEN of SPADES
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 6---------------------
+Player 1 plays card 10 of DIAMONDS
+Player 2 plays card 4 of DIAMONDS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 7---------------------
+Player 1 plays card 2 of CLUBS
+Player 2 plays card QUEEN of DIAMONDS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 8---------------------
+Player 1 plays card 7 of CLUBS
+Player 2 plays card 5 of SPADES
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 9---------------------
+Player 1 plays card 3 of SPADES
+Player 2 plays card 9 of HEARTS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 10---------------------
+Player 1 plays card 9 of CLUBS
+Player 2 plays card KING of SPADES
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 11---------------------
+Player 1 plays card ACE of HEARTS
+Player 2 plays card 6 of DIAMONDS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 12---------------------
+Player 1 plays card 4 of HEARTS
+Player 2 plays card KING of HEARTS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 13---------------------
+Player 1 plays card 8 of CLUBS
+Player 2 plays card 10 of CLUBS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 14---------------------
+Player 1 plays card 2 of DIAMONDS
+Player 2 plays card 8 of SPADES
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 15---------------------
+Player 1 plays card 2 of SPADES
+Player 2 plays card 10 of HEARTS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 16---------------------
+Player 1 plays card 3 of HEARTS
+Player 2 plays card 5 of CLUBS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 17---------------------
+Player 1 plays card JACK of SPADES
+Player 2 plays card 3 of DIAMONDS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 18---------------------
+Player 1 plays card QUEEN of HEARTS
+Player 2 plays card QUEEN of CLUBS
+Both players tied!
+Player 1 plays card 4 of SPADES
+Player 2 plays card 3 of CLUBS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 19---------------------
+Player 1 plays card 6 of SPADES
+Player 2 plays card JACK of DIAMONDS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 20---------------------
+Player 1 plays card 9 of SPADES
+Player 2 plays card 5 of HEARTS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 21---------------------
+Player 1 plays card 7 of HEARTS
+Player 2 plays card KING of DIAMONDS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 22---------------------
+Player 1 plays card 9 of DIAMONDS
+Player 2 plays card 2 of HEARTS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 23---------------------
+Player 1 plays card 6 of CLUBS
+Player 2 plays card 6 of HEARTS
+Both players tied!
+Player 1 plays card KING of CLUBS
+Player 2 plays card 2 of CLUBS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 24---------------------
+Player 1 plays card 10 of SPADES
+Player 2 plays card QUEEN of DIAMONDS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 25---------------------
+Player 1 plays card 4 of DIAMONDS
+Player 2 plays card 3 of SPADES
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 26---------------------
+Player 1 plays card 10 of DIAMONDS
+Player 2 plays card 9 of HEARTS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 27---------------------
+Player 1 plays card 5 of SPADES
+Player 2 plays card 9 of CLUBS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 28---------------------
+Player 1 plays card 7 of CLUBS
+Player 2 plays card KING of SPADES
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 29---------------------
+Player 1 plays card 6 of DIAMONDS
+Player 2 plays card 4 of HEARTS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 30---------------------
+Player 1 plays card ACE of HEARTS
+Player 2 plays card KING of HEARTS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 31---------------------
+Player 1 plays card 3 of DIAMONDS
+Player 2 plays card 8 of CLUBS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 32---------------------
+Player 1 plays card JACK of SPADES
+Player 2 plays card 10 of CLUBS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 33---------------------
+Player 1 plays card 3 of CLUBS
+Player 2 plays card 2 of DIAMONDS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 34---------------------
+Player 1 plays card 4 of SPADES
+Player 2 plays card 8 of SPADES
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 35---------------------
+Player 1 plays card 7 of DIAMONDS
+Player 2 plays card 2 of SPADES
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 36---------------------
+Player 1 plays card 4 of CLUBS
+Player 2 plays card 10 of HEARTS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 37---------------------
+Player 1 plays card 5 of HEARTS
+Player 2 plays card 3 of HEARTS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 38---------------------
+Player 1 plays card 9 of SPADES
+Player 2 plays card 5 of CLUBS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 39---------------------
+Player 1 plays card ACE of DIAMONDS
+Player 2 plays card 6 of SPADES
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 40---------------------
+Player 1 plays card 2 of HEARTS
+Player 2 plays card JACK of DIAMONDS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 41---------------------
+Player 1 plays card 9 of DIAMONDS
+Player 2 plays card 8 of HEARTS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 42---------------------
+Player 1 plays card 2 of CLUBS
+Player 2 plays card 7 of HEARTS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 43---------------------
+Player 1 plays card KING of CLUBS
+Player 2 plays card KING of DIAMONDS
+Both players tied!
+Player 1 plays card 3 of SPADES
+Player 2 plays card QUEEN of SPADES
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 44---------------------
+Player 1 plays card 4 of DIAMONDS
+Player 2 plays card 5 of SPADES
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 45---------------------
+Player 1 plays card 7 of SPADES
+Player 2 plays card 9 of CLUBS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 46---------------------
+Player 1 plays card 9 of HEARTS
+Player 2 plays card 7 of CLUBS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 47---------------------
+Player 1 plays card 10 of DIAMONDS
+Player 2 plays card KING of SPADES
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 48---------------------
+Player 1 plays card 4 of HEARTS
+Player 2 plays card 3 of DIAMONDS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 49---------------------
+Player 1 plays card 6 of DIAMONDS
+Player 2 plays card 8 of CLUBS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 50---------------------
+Player 1 plays card KING of HEARTS
+Player 2 plays card 4 of SPADES
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 51---------------------
+Player 1 plays card ACE of HEARTS
+Player 2 plays card 8 of SPADES
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 52---------------------
+Player 1 plays card 10 of CLUBS
+Player 2 plays card 4 of CLUBS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 53---------------------
+Player 1 plays card JACK of SPADES
+Player 2 plays card 10 of HEARTS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 54---------------------
+Player 1 plays card 2 of DIAMONDS
+Player 2 plays card 2 of HEARTS
+Both players tied!
+Player 1 plays card 7 of DIAMONDS
+Player 2 plays card 7 of HEARTS
+Both players tied!
+Player 1 plays card 5 of CLUBS
+Player 2 plays card QUEEN of DIAMONDS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 55---------------------
+Player 1 plays card 9 of SPADES
+Player 2 plays card 10 of SPADES
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 56---------------------
+Player 1 plays card 6 of SPADES
+Player 2 plays card 4 of DIAMONDS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 57---------------------
+Player 1 plays card ACE of DIAMONDS
+Player 2 plays card 5 of SPADES
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 58---------------------
+Player 1 plays card 8 of HEARTS
+Player 2 plays card 5 of DIAMONDS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 59---------------------
+Player 1 plays card 9 of DIAMONDS
+Player 2 plays card 7 of SPADES
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 60---------------------
+Player 1 plays card 7 of CLUBS
+Player 2 plays card 9 of CLUBS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 61---------------------
+Player 1 plays card 9 of HEARTS
+Player 2 plays card 8 of DIAMONDS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 62---------------------
+Player 1 plays card 3 of DIAMONDS
+Player 2 plays card 10 of DIAMONDS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 63---------------------
+Player 1 plays card 4 of HEARTS
+Player 2 plays card KING of SPADES
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 64---------------------
+Player 1 plays card 4 of SPADES
+Player 2 plays card 6 of DIAMONDS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 65---------------------
+Player 1 plays card KING of HEARTS
+Player 2 plays card 8 of CLUBS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 66---------------------
+Player 1 plays card 8 of SPADES
+Player 2 plays card 5 of CLUBS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 67---------------------
+Player 1 plays card ACE of HEARTS
+Player 2 plays card QUEEN of DIAMONDS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 68---------------------
+Player 1 plays card 4 of CLUBS
+Player 2 plays card QUEEN of SPADES
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 69---------------------
+Player 1 plays card 10 of CLUBS
+Player 2 plays card 3 of SPADES
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 70---------------------
+Player 1 plays card 10 of HEARTS
+Player 2 plays card 5 of HEARTS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 71---------------------
+Player 1 plays card JACK of SPADES
+Player 2 plays card 3 of HEARTS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 72---------------------
+Player 1 plays card 4 of DIAMONDS
+Player 2 plays card 9 of SPADES
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 73---------------------
+Player 1 plays card 6 of SPADES
+Player 2 plays card 10 of SPADES
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 74---------------------
+Player 1 plays card 2 of SPADES
+Player 2 plays card 2 of CLUBS
+Both players tied!
+Player 1 plays card 3 of CLUBS
+Player 2 plays card 9 of CLUBS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 75---------------------
+Player 1 plays card 5 of DIAMONDS
+Player 2 plays card 3 of DIAMONDS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 76---------------------
+Player 1 plays card 8 of HEARTS
+Player 2 plays card 10 of DIAMONDS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 77---------------------
+Player 1 plays card 7 of SPADES
+Player 2 plays card 4 of HEARTS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 78---------------------
+Player 1 plays card 9 of DIAMONDS
+Player 2 plays card KING of SPADES
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 79---------------------
+Player 1 plays card 8 of DIAMONDS
+Player 2 plays card 4 of SPADES
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 80---------------------
+Player 1 plays card 9 of HEARTS
+Player 2 plays card 6 of DIAMONDS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 81---------------------
+Player 1 plays card 8 of CLUBS
+Player 2 plays card 4 of CLUBS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 82---------------------
+Player 1 plays card KING of HEARTS
+Player 2 plays card QUEEN of SPADES
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 83---------------------
+Player 1 plays card 5 of CLUBS
+Player 2 plays card 4 of DIAMONDS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 84---------------------
+Player 1 plays card 8 of SPADES
+Player 2 plays card 9 of SPADES
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 85---------------------
+Player 1 plays card QUEEN of DIAMONDS
+Player 2 plays card 6 of SPADES
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 86---------------------
+Player 1 plays card ACE of HEARTS
+Player 2 plays card 10 of SPADES
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 87---------------------
+Player 1 plays card 3 of SPADES
+Player 2 plays card 3 of CLUBS
+Both players tied!
+Player 1 plays card 10 of HEARTS
+Player 2 plays card JACK of DIAMONDS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 88---------------------
+Player 1 plays card 3 of HEARTS
+Player 2 plays card 8 of HEARTS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 89---------------------
+Player 1 plays card JACK of SPADES
+Player 2 plays card 10 of DIAMONDS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 90---------------------
+Player 1 plays card 3 of DIAMONDS
+Player 2 plays card 5 of SPADES
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 91---------------------
+Player 1 plays card 5 of DIAMONDS
+Player 2 plays card 9 of DIAMONDS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 92---------------------
+Player 1 plays card ACE of DIAMONDS
+Player 2 plays card KING of SPADES
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 93---------------------
+Player 1 plays card 4 of HEARTS
+Player 2 plays card 8 of SPADES
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 94---------------------
+Player 1 plays card 7 of SPADES
+Player 2 plays card 9 of SPADES
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 95---------------------
+Player 1 plays card 4 of SPADES
+Player 2 plays card 10 of HEARTS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 96---------------------
+Player 1 plays card 8 of DIAMONDS
+Player 2 plays card JACK of DIAMONDS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 97---------------------
+Player 1 plays card 6 of DIAMONDS
+Player 2 plays card 7 of CLUBS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 98---------------------
+Player 1 plays card 9 of HEARTS
+Player 2 plays card 9 of CLUBS
+Both players tied!
+Player 1 plays card QUEEN of SPADES
+Player 2 plays card 5 of HEARTS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 99---------------------
+Player 1 plays card KING of HEARTS
+Player 2 plays card 3 of DIAMONDS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 100---------------------
+Player 1 plays card 4 of DIAMONDS
+Player 2 plays card 5 of SPADES
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 101---------------------
+Player 1 plays card 5 of CLUBS
+Player 2 plays card 5 of DIAMONDS
+Both players tied!
+Player 1 plays card 10 of SPADES
+Player 2 plays card 8 of SPADES
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 102---------------------
+Player 1 plays card ACE of HEARTS
+Player 2 plays card 7 of SPADES
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 103---------------------
+Player 1 plays card 10 of DIAMONDS
+Player 2 plays card 9 of SPADES
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 104---------------------
+Player 1 plays card JACK of SPADES
+Player 2 plays card 4 of SPADES
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 105---------------------
+Player 1 plays card 10 of CLUBS
+Player 2 plays card 10 of HEARTS
+Both players tied!
+Player 1 plays card 5 of HEARTS
+Player 2 plays card 6 of DIAMONDS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 106---------------------
+Player 1 plays card QUEEN of SPADES
+Player 2 plays card 7 of CLUBS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 107---------------------
+Player 1 plays card 8 of HEARTS
+Player 2 plays card 4 of DIAMONDS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 108---------------------
+Player 1 plays card 3 of HEARTS
+Player 2 plays card 5 of SPADES
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 109---------------------
+Player 1 plays card 3 of DIAMONDS
+Player 2 plays card 4 of CLUBS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 110---------------------
+Player 1 plays card KING of HEARTS
+Player 2 plays card 5 of HEARTS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 111---------------------
+Player 1 plays card 8 of CLUBS
+Player 2 plays card 6 of DIAMONDS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 112---------------------
+Player 1 plays card 8 of SPADES
+Player 2 plays card JACK of DIAMONDS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 113---------------------
+Player 1 plays card 10 of SPADES
+Player 2 plays card 8 of DIAMONDS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 114---------------------
+Player 1 plays card 4 of HEARTS
+Player 2 plays card 3 of HEARTS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 115---------------------
+Player 1 plays card 9 of DIAMONDS
+Player 2 plays card 5 of SPADES
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 116---------------------
+Player 1 plays card 7 of SPADES
+Player 2 plays card 3 of DIAMONDS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 117---------------------
+Player 1 plays card ACE of HEARTS
+Player 2 plays card 4 of CLUBS
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 118---------------------
+Player 1 plays card QUEEN of DIAMONDS
+Player 2 plays card 8 of SPADES
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 119---------------------
+Player 1 plays card 9 of SPADES
+Player 2 plays card JACK of DIAMONDS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 120---------------------
+Player 1 plays card 10 of DIAMONDS
+Player 2 plays card 9 of SPADES
+Player 1 wins the round!
+-----------------------------------------------------
+---------------------ROUND 121---------------------
+Player 1 plays card 6 of SPADES
+Player 2 plays card JACK of DIAMONDS
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 122---------------------
+Player 1 plays card 4 of SPADES
+Player 2 plays card 6 of SPADES
+Player 2 wins the round!
+-----------------------------------------------------
+---------------------ROUND 123---------------------
+Player 1 plays card JACK of SPADES
+Player 2 plays card JACK of DIAMONDS
+Both players tied!
+Player 2 has run out of cards!
+Player 1 has won the game!
