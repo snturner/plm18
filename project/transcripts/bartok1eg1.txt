@@ -1,0 +1,352 @@
+Rules of Bartok:
+
+Enter number of players (2 - 6):
+2
+
+----------------------PLAYER 1's TURN----------------------
+Current card on top: 3 of SPADES
+ 1) KING of HEARTS
+ 2) 4 of HEARTS
+ 3) 5 of CLUBS
+ 4) 2 of DIAMONDS
+ 5) 5 of SPADES
+ 6) 4 of CLUBS
+Enter desired card position to play (enter -1 to draw):
+5
+
+----------------------PLAYER 2's TURN----------------------
+Current card on top: 5 of SPADES
+ 1) 8 of DIAMONDS
+ 2) 6 of SPADES
+ 3) QUEEN of HEARTS
+ 4) 7 of HEARTS
+ 5) JACK of CLUBS
+ 6) 10 of HEARTS
+Enter desired card position to play (enter -1 to draw):
+2
+
+----------------------PLAYER 1's TURN----------------------
+Current card on top: 6 of SPADES
+ 1) KING of HEARTS
+ 2) 4 of HEARTS
+ 3) 5 of CLUBS
+ 4) 2 of DIAMONDS
+ 5) 4 of CLUBS
+Enter desired card position to play (enter -1 to draw):
+-1
+Player 1 draws a card
+
+----------------------PLAYER 2's TURN----------------------
+Current card on top: 6 of SPADES
+ 1) 8 of DIAMONDS
+ 2) QUEEN of HEARTS
+ 3) 7 of HEARTS
+ 4) JACK of CLUBS
+ 5) 10 of HEARTS
+Enter desired card position to play (enter -1 to draw):
+-1
+Player 2 draws a card
+
+----------------------PLAYER 1's TURN----------------------
+Current card on top: 6 of SPADES
+ 1) KING of HEARTS
+ 2) 4 of HEARTS
+ 3) 5 of CLUBS
+ 4) 2 of DIAMONDS
+ 5) 4 of CLUBS
+ 6) JACK of HEARTS
+Enter desired card position to play (enter -1 to draw):
+-1
+Player 1 draws a card
+
+----------------------PLAYER 2's TURN----------------------
+Current card on top: 6 of SPADES
+ 1) 8 of DIAMONDS
+ 2) QUEEN of HEARTS
+ 3) 7 of HEARTS
+ 4) JACK of CLUBS
+ 5) 10 of HEARTS
+ 6) 5 of DIAMONDS
+Enter desired card position to play (enter -1 to draw):
+-1
+Player 2 draws a card
+
+----------------------PLAYER 1's TURN----------------------
+Current card on top: 6 of SPADES
+ 1) KING of HEARTS
+ 2) 4 of HEARTS
+ 3) 5 of CLUBS
+ 4) 2 of DIAMONDS
+ 5) 4 of CLUBS
+ 6) JACK of HEARTS
+ 7) 4 of SPADES
+Enter desired card position to play (enter -1 to draw):
+7
+
+----------------------PLAYER 2's TURN----------------------
+Current card on top: 4 of SPADES
+ 1) 8 of DIAMONDS
+ 2) QUEEN of HEARTS
+ 3) 7 of HEARTS
+ 4) JACK of CLUBS
+ 5) 10 of HEARTS
+ 6) 5 of DIAMONDS
+ 7) 4 of DIAMONDS
+Enter desired card position to play (enter -1 to draw):
+7
+
+----------------------PLAYER 1's TURN----------------------
+Current card on top: 4 of DIAMONDS
+ 1) KING of HEARTS
+ 2) 4 of HEARTS
+ 3) 5 of CLUBS
+ 4) 2 of DIAMONDS
+ 5) 4 of CLUBS
+ 6) JACK of HEARTS
+Enter desired card position to play (enter -1 to draw):
+2
+
+----------------------PLAYER 2's TURN----------------------
+Current card on top: 4 of HEARTS
+ 1) 8 of DIAMONDS
+ 2) QUEEN of HEARTS
+ 3) 7 of HEARTS
+ 4) JACK of CLUBS
+ 5) 10 of HEARTS
+ 6) 5 of DIAMONDS
+Enter desired card position to play (enter -1 to draw):
+3
+
+----------------------PLAYER 1's TURN----------------------
+Current card on top: 7 of HEARTS
+ 1) KING of HEARTS
+ 2) 5 of CLUBS
+ 3) 2 of DIAMONDS
+ 4) 4 of CLUBS
+ 5) JACK of HEARTS
+Enter desired card position to play (enter -1 to draw):
+1
+
+----------------------PLAYER 2's TURN----------------------
+Current card on top: KING of HEARTS
+ 1) 8 of DIAMONDS
+ 2) QUEEN of HEARTS
+ 3) JACK of CLUBS
+ 4) 10 of HEARTS
+ 5) 5 of DIAMONDS
+Enter desired card position to play (enter -1 to draw):
+2
+
+----------------------PLAYER 1's TURN----------------------
+Current card on top: QUEEN of HEARTS
+ 1) 5 of CLUBS
+ 2) 2 of DIAMONDS
+ 3) 4 of CLUBS
+ 4) JACK of HEARTS
+Enter desired card position to play (enter -1 to draw):
+4
+
+----------------------PLAYER 2's TURN----------------------
+Current card on top: JACK of HEARTS
+ 1) 8 of DIAMONDS
+ 2) JACK of CLUBS
+ 3) 10 of HEARTS
+ 4) 5 of DIAMONDS
+Enter desired card position to play (enter -1 to draw):
+3
+
+----------------------PLAYER 1's TURN----------------------
+Current card on top: 10 of HEARTS
+ 1) 5 of CLUBS
+ 2) 2 of DIAMONDS
+ 3) 4 of CLUBS
+Enter desired card position to play (enter -1 to draw):
+-1
+Player 1 draws a card
+
+----------------------PLAYER 2's TURN----------------------
+Current card on top: 10 of HEARTS
+ 1) 8 of DIAMONDS
+ 2) JACK of CLUBS
+ 3) 5 of DIAMONDS
+Enter desired card position to play (enter -1 to draw):
+-1 
+Player 2 draws a card
+
+----------------------PLAYER 1's TURN----------------------
+Current card on top: 10 of HEARTS
+ 1) 5 of CLUBS
+ 2) 2 of DIAMONDS
+ 3) 4 of CLUBS
+ 4) 3 of HEARTS
+Enter desired card position to play (enter -1 to draw):
+4
+
+----------------------PLAYER 2's TURN----------------------
+Current card on top: 3 of HEARTS
+ 1) 8 of DIAMONDS
+ 2) JACK of CLUBS
+ 3) 5 of DIAMONDS
+ 4) JACK of DIAMONDS
+Enter desired card position to play (enter -1 to draw):
+-1
+Player 2 draws a card
+
+----------------------PLAYER 1's TURN----------------------
+Current card on top: 3 of HEARTS
+ 1) 5 of CLUBS
+ 2) 2 of DIAMONDS
+ 3) 4 of CLUBS
+Enter desired card position to play (enter -1 to draw):
+-1
+Player 1 draws a card
+
+----------------------PLAYER 2's TURN----------------------
+Current card on top: 3 of HEARTS
+ 1) 8 of DIAMONDS
+ 2) JACK of CLUBS
+ 3) 5 of DIAMONDS
+ 4) JACK of DIAMONDS
+ 5) 5 of HEARTS
+Enter desired card position to play (enter -1 to draw):
+5
+
+----------------------PLAYER 1's TURN----------------------
+Current card on top: 5 of HEARTS
+ 1) 5 of CLUBS
+ 2) 2 of DIAMONDS
+ 3) 4 of CLUBS
+ 4) QUEEN of DIAMONDS
+Enter desired card position to play (enter -1 to draw):
+1
+
+----------------------PLAYER 2's TURN----------------------
+Current card on top: 5 of CLUBS
+ 1) 8 of DIAMONDS
+ 2) JACK of CLUBS
+ 3) 5 of DIAMONDS
+ 4) JACK of DIAMONDS
+Enter desired card position to play (enter -1 to draw):
+2
+
+----------------------PLAYER 1's TURN----------------------
+Current card on top: JACK of CLUBS
+ 1) 2 of DIAMONDS
+ 2) 4 of CLUBS
+ 3) QUEEN of DIAMONDS
+Enter desired card position to play (enter -1 to draw):
+2
+
+----------------------PLAYER 2's TURN----------------------
+Current card on top: 4 of CLUBS
+ 1) 8 of DIAMONDS
+ 2) 5 of DIAMONDS
+ 3) JACK of DIAMONDS
+Enter desired card position to play (enter -1 to draw):
+-1
+Player 2 draws a card
+
+----------------------PLAYER 1's TURN----------------------
+Current card on top: 4 of CLUBS
+ 1) 2 of DIAMONDS
+ 2) QUEEN of DIAMONDS
+Enter desired card position to play (enter -1 to draw):
+-1
+Player 1 draws a card
+
+----------------------PLAYER 2's TURN----------------------
+Current card on top: 4 of CLUBS
+ 1) 8 of DIAMONDS
+ 2) 5 of DIAMONDS
+ 3) JACK of DIAMONDS
+ 4) ACE of HEARTS
+Enter desired card position to play (enter -1 to draw):
+-1
+Player 2 draws a card
+
+----------------------PLAYER 1's TURN----------------------
+Current card on top: 4 of CLUBS
+ 1) 2 of DIAMONDS
+ 2) QUEEN of DIAMONDS
+ 3) 6 of HEARTS
+Enter desired card position to play (enter -1 to draw):
+-1
+Player 1 draws a card
+
+----------------------PLAYER 2's TURN----------------------
+Current card on top: 4 of CLUBS
+ 1) 8 of DIAMONDS
+ 2) 5 of DIAMONDS
+ 3) JACK of DIAMONDS
+ 4) ACE of HEARTS
+ 5) 8 of CLUBS
+Enter desired card position to play (enter -1 to draw):
+5
+
+----------------------PLAYER 1's TURN----------------------
+Current card on top: 8 of CLUBS
+ 1) 2 of DIAMONDS
+ 2) QUEEN of DIAMONDS
+ 3) 6 of HEARTS
+ 4) ACE of DIAMONDS
+Enter desired card position to play (enter -1 to draw):
+-1
+Player 1 draws a card
+
+----------------------PLAYER 2's TURN----------------------
+Current card on top: 8 of CLUBS
+ 1) 8 of DIAMONDS
+ 2) 5 of DIAMONDS
+ 3) JACK of DIAMONDS
+ 4) ACE of HEARTS
+Enter desired card position to play (enter -1 to draw):
+1
+
+----------------------PLAYER 1's TURN----------------------
+Current card on top: 8 of DIAMONDS
+ 1) 2 of DIAMONDS
+ 2) QUEEN of DIAMONDS
+ 3) 6 of HEARTS
+ 4) ACE of DIAMONDS
+ 5) 9 of DIAMONDS
+Enter desired card position to play (enter -1 to draw):
+1
+
+----------------------PLAYER 2's TURN----------------------
+Current card on top: 2 of DIAMONDS
+ 1) 5 of DIAMONDS
+ 2) JACK of DIAMONDS
+ 3) ACE of HEARTS
+Enter desired card position to play (enter -1 to draw):
+1
+
+----------------------PLAYER 1's TURN----------------------
+Current card on top: 5 of DIAMONDS
+ 1) QUEEN of DIAMONDS
+ 2) 6 of HEARTS
+ 3) ACE of DIAMONDS
+ 4) 9 of DIAMONDS
+Enter desired card position to play (enter -1 to draw):
+1
+
+----------------------PLAYER 2's TURN----------------------
+Current card on top: QUEEN of DIAMONDS
+ 1) JACK of DIAMONDS
+ 2) ACE of HEARTS
+Enter desired card position to play (enter -1 to draw):
+1
+
+----------------------PLAYER 1's TURN----------------------
+Current card on top: JACK of DIAMONDS
+ 1) 6 of HEARTS
+ 2) ACE of DIAMONDS
+ 3) 9 of DIAMONDS
+Enter desired card position to play (enter -1 to draw):
+2
+
+----------------------PLAYER 2's TURN----------------------
+Current card on top: ACE of DIAMONDS
+ 1) ACE of HEARTS
+Enter desired card position to play (enter -1 to draw):
+1
+Player 1 wins!
