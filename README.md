@@ -8,9 +8,9 @@ Thompson,Carolyn
 Turner,Selena
 
 # Proj 1 Step 1
-Transcripts located in *transcript* folder
+Transcripts located in *project/transcript* directory
 
-Project code located in *project* folder
+Project code located in *project* directory
 
 # To Run
 1. Download all files from *project* folder.
