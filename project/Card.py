@@ -13,29 +13,12 @@ class Card:
 
     def string(self):
         cardValue = ""
-        cardSuit = ""
-        if self.suit == 1:
-            cardSuit = Card.SUITS[0]
-            for c in range(1,14):
-                if self.value == c:
-                    cardValue = Card.VALUES[c - 1]
-        elif self.suit == 2:
-            cardSuit = Card.SUITS[1]
-            for c in range(1,14):
-                if self.value == c:
-                    cardValue = Card.VALUES[c - 1]
-        elif self.suit == 3:
-            cardSuit = Card.SUITS[2]
-            for c in range(1,14):
-                if self.value == c:
-                    cardValue = Card.VALUES[c - 1]
-        elif self.suit == 4:
-            cardSuit = Card.SUITS[3]
-            for c in range(1,14):
-                if self.value == c:
-                    cardValue = Card.VALUES[c - 1]
+        cardSuit = Card.SUITS[self.suit - 1]
+        for c in range(1,14):
+            if self.value == c:
+                cardValue = Card.VALUES[c - 1]
         return cardValue + ' of ' + cardSuit 
-
+    
     def isFaceCard(self):
         faceList = [10, 11, 12]
         for f in faceList:
