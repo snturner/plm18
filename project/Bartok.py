@@ -46,7 +46,7 @@ def startGame(players):
             if(len(d.deck.cards) <= 0):
                 return -1
 
-def main():
+def PlayBartok():
     print("Rules of Bartok:\n")
     print("There must be at least 2 players and at most 6 players.")
     print("Players play turn-based rounds where one player")
@@ -80,7 +80,3 @@ def main():
         print("The game is a tie!")
     else:
         print("Player %d wins!" % playernum)
-
-
-if  __name__ =='__main__':
-    main()

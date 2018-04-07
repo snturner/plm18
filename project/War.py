@@ -63,7 +63,7 @@ def giveCards(cardP1, cardP2, p1, p2):
         elif len(p2.hand) == 0:
             return 1
 
-def main():
+def PlayWar():
         
     '''Starts game and shows welcome message and rules'''
     print('Welcome to WAR!')
@@ -103,6 +103,3 @@ def main():
     elif not p2.hand:
         print('Player 2 has run out of cards!')
         print('Player 1 has won the game!')
-
-if  __name__ =='__main__':
-    main()
