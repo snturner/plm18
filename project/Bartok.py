@@ -1,9 +1,7 @@
 # play bartok
-
-from PlayerBartok import PlayerBartok
 from Dealer import Dealer
 from Card import Card
-from PlayerBartok import PlayerBartok
+from Player import Player
 from Deck import Deck
 #number of players
 numOfPlayers = 4
@@ -69,7 +67,7 @@ def PlayBartok():
             print("Enter a valid number")
 
     for i in range(0, numOfPlayers):
-        players.append(PlayerBartok())
+        players.append(Player())
     #deals the cards   
     #d = Dealer()
     d.dealBartok(players, numOfPlayers)

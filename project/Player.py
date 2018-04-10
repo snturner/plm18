@@ -1,5 +1,5 @@
 import Card
-class PlayerBartok:
+class Player:
 	
 	def __init__(self):
 		self.x = 2
@@ -26,7 +26,3 @@ class PlayerBartok:
 			if card.value == 14:
 				print(i + ") " + "A" + " " + card.suit)
 			i += 1
-			
-
-
-			

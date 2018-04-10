@@ -2,7 +2,7 @@
 from Card import Card
 from collections import deque
 from Deck import Deck
-from PlayerWar import PlayerWar
+from Player import Player
 from Dealer import Dealer
 
 cardList = []
@@ -76,8 +76,8 @@ def PlayWar():
     print('Each player then deals three cards facedown (the spoils are for the winner) and a face-up card.')
     print('The player with the higher face-up card takes all the cards from the war into his stack.')
 
-    p1 = PlayerWar()
-    p2 = PlayerWar()
+    p1 = Player()
+    p2 = Player()
     d = Dealer()
     global cardList
     global roundNum

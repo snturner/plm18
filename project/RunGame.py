@@ -1,8 +1,6 @@
-import sys
+from Game import GameType, Answer
 import War
 import Bartok
-from Game import GameType
-from Game import Answer
 
 def runGame():
     playAgain = 'yes'
