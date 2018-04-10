@@ -76,13 +76,18 @@ def PlayWar():
     print('Each player then deals three cards facedown (the spoils are for the winner) and a face-up card.')
     print('The player with the higher face-up card takes all the cards from the war into his stack.')
 
+    # Initialize variables
     p1 = Player()
     p2 = Player()
     d = Dealer()
     global cardList
     global roundNum
 
-    d.dealWar(p1, p2)
+    # Deals for War
+    for i in range(0, 25):
+        p1.hand.append(d.dealCard())
+    for i in range(0, 25):
+        p2.hand.append(d.dealCard())
 
     hasCards = True
     while hasCards:

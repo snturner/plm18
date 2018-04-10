@@ -30,7 +30,7 @@ def startGame(players):
             cardnum = int(input())
             if cardnum == -1:
                 print("Player %(num)d draws a card"% {"num": (i + 1)})
-                players[i].hand.append(d.deal1Card())
+                players[i].hand.append(d.dealCard())
             else:
                 cardPlayed = players[i].hand[(cardnum - 1)]
                 if cardPlayed.value == discardList[0].value or cardPlayed.suit == discardList[0].suit:
@@ -38,7 +38,7 @@ def startGame(players):
                     del players[i].hand[(cardnum - 1)]
                 else:
                     print("Invalid card, Player %(num)d draws a card"% {"num": (i + 1)})
-                    players[i].hand.append(d.deal1Card())
+                    players[i].hand.append(d.dealCard())
             if(len(players[i].hand) <= 0):
                 return (i + 1)
             if(len(d.deck.cards) <= 0):
@@ -70,9 +70,12 @@ def PlayBartok():
         players.append(Player())
     #deals the cards   
     #d = Dealer()
-    d.dealBartok(players, numOfPlayers)
+    for k in range(0, numOfPlayers):
+        for i in range(0, 6):
+            print(i)
+            players[k].hand.append(d.dealCard())
     #initlized the discard pile
-    discardList.append(d.deal1Card())
+    discardList.append(d.dealCard())
     playernum = startGame(players)
     if playernum <= 0:
         print("The game is a tie!")
