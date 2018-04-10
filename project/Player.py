@@ -1,3 +1,5 @@
+# Abstracted class
+
 import Card
 class Player:
 	

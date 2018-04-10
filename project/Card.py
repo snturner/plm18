@@ -1,3 +1,5 @@
+# Abstracted class
+
 class Card:
     up = True
     down = False

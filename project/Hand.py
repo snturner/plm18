@@ -1,3 +1,5 @@
+# Abstracted class
+
 from random import shuffle
 import Card
 

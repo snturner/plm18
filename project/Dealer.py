@@ -1,10 +1,12 @@
+# Abstracted class
+
 from Deck import Deck
 from Card import Card
 
 class Dealer:
     def __init__(self):
         self.deck = Deck()
-        
+
     # def dealWar(self, player1, player2):
     #     deck = Deck()
     #     player1.hand = deck.cards[:25]
