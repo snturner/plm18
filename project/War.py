@@ -84,10 +84,7 @@ def PlayWar():
     global roundNum
 
     # Deals for War
-    for i in range(0, 25):
-        p1.hand.append(d.dealCard())
-    for i in range(0, 25):
-        p2.hand.append(d.dealCard())
+    d.dealHand([p1, p2], 2, 25)
 
     hasCards = True
     while hasCards:

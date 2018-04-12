@@ -17,8 +17,12 @@ class Dealer:
     #         players[i].hand = self.deck.cards[:6]
     #         self.deck.cards = self.deck.cards[6:]
 
-
     def dealCard(self):
         cardToDeal = self.deck.cards[0]
         self.deck.cards = self.deck.cards[1:]
         return cardToDeal
+
+    def dealHand(self, players, numPlayers, numCards):
+        for i in range(0, numPlayers):
+            for k in range(0, numCards):
+                players[i].hand.append(self.dealCard())

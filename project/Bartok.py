@@ -70,10 +70,7 @@ def PlayBartok():
         players.append(Player())
     #deals the cards   
     #d = Dealer()
-    for k in range(0, numOfPlayers):
-        for i in range(0, 6):
-            print(i)
-            players[k].hand.append(d.dealCard())
+    d.dealHand(players, numOfPlayers, 6)
     #initlized the discard pile
     discardList.append(d.dealCard())
     playernum = startGame(players)
