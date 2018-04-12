@@ -47,8 +47,14 @@ class Bartok():
      def __init__(self):
         run()
     def run():
-    fsm = FSM()
-    start = Start(startGame())
-    startGame = State
+        #states
+        start = State(startGame(), "start")
+        #transitions
+        setupT = Transition(true, startGame)
+        setUpT.addactions(setupGame)
+        start.addtransition(setupT)
+
+        #setup the fsm
+        fsm = FSM(start)
 
 
