@@ -33,7 +33,7 @@ def startGame(players):
                 players[i].hand.append(d.dealCard())
             else:
                 cardPlayed = players[i].hand[(cardnum - 1)]
-                if cardPlayed.value == discardList[0].value or cardPlayed.suit == discardList[0].suit:
+                if Card.compare(cardPlayed.value, discardList[0].value) == 0 or Card.compare(cardPlayed.suit, discardList[0].suit) == 0:
                     discardList.insert(0, cardPlayed)
                     del players[i].hand[(cardnum - 1)]
                 else:

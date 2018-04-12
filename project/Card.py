@@ -27,6 +27,14 @@ class Card:
             if self.suit == f:
                 return True
         return False
+    
+    def compare(card1, card2):
+        if card1 == card2:
+            return 0
+        elif card1 > card2:
+            return 1
+        else:
+            return 2
 
     def flip(self):
         if self.face == False:
