@@ -35,13 +35,13 @@ def giveCards(cardP1, cardP2, p1, p2):
         p1.hand = p1.hand[1:]
         p2.hand = p2.hand[1:]
 
-        if cardP1.value > cardP2.value:
+        if Card.compare(cardP1.value, cardP2.value) == 1:
             cardList.append(cardP1)
             cardList.append(cardP2)
             print('Player 1 wins the round!')
             print('-----------------------------------------------------')
             return 1
-        elif cardP1.value < cardP2.value:
+        elif Card.compare(cardP1.value, cardP2.value) == 2:
             cardList.append(cardP2)
             cardList.append(cardP1)
             print('Player 2 wins the round!')
