@@ -49,6 +49,12 @@ class Bartok():
     def run():
         #states
         start = State(startGame(), "start")
+        roundBegin = 
+        playerTurn = 
+        roundEnd = 
+        win =
+        endGame =
+        
         #transitions
         setupT = Transition(true, startGame)
         setUpT.addactions(setupGame)
@@ -57,4 +63,33 @@ class Bartok():
         #setup the fsm
         fsm = FSM(start)
 
+        
+class War():
+    def __init__(self):
+        run()
+    def run(): 
+        #states
+        start = State(startGame(), "start") #does there have to be a different startGame for war and bartok?
+        roundBegin = 
+        playerTurn = 
+        roundEnd = 
+        win =
+        endGame =
+        
+        #transitions
+        setupT = Transition(true, startGame)
+        setUpT.addactions(setupGame)
+        start.addtransition(setupT)
 
+        #setup the fsm
+        fsm = FSM(start)
+        
+#Based on https://github.com/shryock/csc495-project/blob/master/src/games/CrazyEightsFSM.py  
+def __main__():
+    
+    try:
+        game = FSM()
+    except:
+        print("\n\nGame Ended unexpectedly.\n")
+        Logger.close()
+        exit()
