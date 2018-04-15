@@ -120,7 +120,6 @@ class WarM():
         
 
 if  __name__ =='__main__':
-    war = WarM()
     try:
         war = WarM()
     except:
