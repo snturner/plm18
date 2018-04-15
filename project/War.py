@@ -57,11 +57,7 @@ def giveCards(cardP1, cardP2, p1, p2):
             p2.hand = p2.hand[2:]
             winner = giveCards(p1.hand[0], p2.hand[0], p1, p2)
             return winner
-    except IndexError:
-        if len(p1.hand) == 0:
-            return 2
-        elif len(p2.hand) == 0:
-            return 1
+
 
 def PlayWar():
         
