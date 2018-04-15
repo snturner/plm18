@@ -31,10 +31,9 @@ def incrementRound(gameResources):
 
 def player1PlaysCard(gameResources):
     p1 = gameResources["players"][0]
-    p2 = gameResources["players"][1]
     gameResources["cardsinplay"].insert(0, p1.hand[0])
     p1.hand = p1.hand[1:]
-    gameResources["hasCards"]  = (len(p1.hand) != 0) and (len(p2.hand) != 0)
+
 
 def player2PlaysCard(gameResources):
     p2 = gameResources["players"][1]

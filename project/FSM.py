@@ -92,10 +92,6 @@ class WarM():
         player1T.addactions(player1PlaysCard)
         player1Turn.addtransition(player1T)
         #player 2 turn transitions
-        noCardT = Transition( not self.gameResources["hasCards"], end)
-        noCardT.addactions(printWinner)
-        player2Turn.addtransition(noCardT)
-
         player2T = Transition(True,pickWinner)
         player2T.addactions(player2PlaysCard)
         player2Turn.addtransition(player2T)
@@ -120,9 +116,10 @@ class WarM():
         
 
 if  __name__ =='__main__':
-    try:
-        war = WarM()
-    except:
-        print("\n\nGame Ended unexpectedly.\n")
+    war = WarM()
+    #try:
+        #war = WarM()
+    #except:
+        #print("\n\nGame Ended unexpectedly.\n")
         #Logger.close()
-        exit()
+        #exit()
