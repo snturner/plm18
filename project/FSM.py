@@ -159,7 +159,23 @@ class BartokMachine():
         playerTurnT.addactions(playCard)
         playerTurnT.addactions(nextPlayer)
         playerTurn.addtransition(playerTurnT)
-        
+        #determine winner transitions
+        winnerT = Transition(True, roundEnd)
+        winnerT.addactions(winner)
+        pickWinner.addtransition(winnerT)
+        #round end transitions
+        for k, v in self.gameResources.items():
+            print(k, v)
+        endGameT = Transition( self.gameResources["emptyHand"], end, "emptyHand")
+        endGameT.addactions(printWinner)
+        roundEnd.addtransition(endGameT)
+        isTieT = Transition(self.gameResources["isTie"], playerTurn, "isTie")
+        roundEnd.addtransition(isTieT)
+        nextRoundT = Transition(True, newRound)
+        roundEnd.addtransition(nextRoundT)
+
+        #setup the fsm
+        fsm = FSM(start)
 
 if  __name__ =='__main__':
     war = WarMachine()

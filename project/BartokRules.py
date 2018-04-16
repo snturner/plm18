@@ -1,3 +1,4 @@
+import sys
 from Player import Player
 from Dealer import Dealer
 from Card import Card
@@ -14,6 +15,7 @@ def printInstruction(gameResources):
 #creates players and deals cards to the players
 def setUp(gameResources):
     gameResources["players"] = []
+    loop = True
     while loop:
         try:
             print("Enter number of players (2 - 6):")
@@ -23,15 +25,17 @@ def setUp(gameResources):
             else:
                 loop = False
         except:
-            print("Enter a valid number")
+            print("Invalid number")
     gameResources["numPlayers"] = numOfPlayers
     for i in range(0, numOfPlayers):
         gameResources["players"].append(Player())
     gameResources["currentPlayer"] = 0
     d = Dealer()
     d.dealHand(gameResources["players"], numOfPlayers, 6)
+    gameResources["dealer"] = d
     gameResources["discardList"] = []
     gameResources["discardList"].append(d.dealCard())
+    gameResources["gameOver"] = False
     
 def setUpRound(gameResources):
     gameResources["round"] = 0
@@ -40,8 +44,8 @@ def incrementRound(gameResources):
     gameResources["round"] += 1
     print('---------------------ROUND %d---------------------' % gameResources["round"])
 
-# prints out the next player's start of turn
-def nextPlayer(gameResources)
+# prints out the player's start of turn
+def printPlayerHand(gameResources):
     playerNum = gameResources["currentPlayer"]
     player = gameResources["players"][playerNum]
     print("---------------------PLAYER %d's TURN---------------------" % (playerNum + 1))
@@ -51,38 +55,64 @@ def nextPlayer(gameResources)
         cardStr = Card.string(card)
         print(" %(num)d) %(card)s" % {"num": k, "card":cardStr})
         k += 1
-    if playerNum == gameResources["numPlayers"]:
+
+# player selects card through command line
+def playerPicksCard(gameResources):
+    d = gameResources["dealer"]
+    playerNum = gameResources["currentPlayer"]
+    player = gameResources["players"][playerNum]
+    while True:
+        try:
+            print("Enter desired card position to play (enter -1 to draw):")
+            cardnum = int(input())
+            if cardnum == -1:
+                print("Player %(num)d draws a card"% {"num": (playerNum + 1)})
+                player.hand.append(d.dealCard())
+            else:
+                gameResources["cardpicked"] = player.hand[(cardnum - 1)]
+            gameResources["cardnum"] = cardnum
+            break
+        except: 
+            print("Invalid number")
+
+# player card is played
+def playCard(gameResources):
+    d = gameResources["dealer"]
+    playerNum = gameResources["currentPlayer"]
+    player = gameResources["players"][playerNum]
+    cardToPlay = gameResources["cardpicked"]
+    cardnum = gameResources["cardnum"] 
+    if cardnum != -1:
+        if Card.compare(cardToPlay.value, gameResources["discardList"][0].value) == 0 or Card.compare(cardToPlay.suit, gameResources["discardList"][0].suit) == 0:
+            gameResources["discardList"].insert(0, cardToPlay)
+            del player.hand[(cardnum - 1)]
+        else:
+            print("Invalid card, Player %(num)d draws a card"% {"num": (playerNum + 1)})
+            player.hand.append(d.dealCard())
+
+# swaps to next player
+def nextPlayer(gameResources):
+    playerNum = gameResources["currentPlayer"]
+    if playerNum == (gameResources["numPlayers"] - 1):
         gameResources["currentPlayer"] = 0
     else:
         gameResources["currentPlayer"] += 1
 
-# player selects card through command line
-def playerPicksCard(gameResources):
-    player = gameResources["currentPlayer"]
-    print("Enter desired card position to play (enter -1 to draw):")
-    cardnum = int(input())
-    if cardnum == -1:
-        print("Player %(num)d draws a card"% {"num": (i + 1)})
-        player.hand.append(d.dealCard())
-    else:
-        gameResources["cardpicked"] = player.hand[(cardnum - 1)]
-        
-# player card is played
-def playCard(gameResources):
-    player = gameResources["currentPlayer"]
-    cardToPlay = gameResources["cardpicked"]
-    if Card.compare(cardToPlay.value, gameResources["discardList"][0].value) == 0 or Card.compare(cardToPlay.suit, gameResources["discardList"][0].suit) == 0:
-        gameResources["discardList"].insert(0, cardPlayed)
-        del player.hand[(cardnum - 1)]
-    else:
-        print("Invalid card, Player %(num)d draws a card"% {"num": (i + 1)})
-        player.hand.append(d.dealCard())
-
-# winner is printed
+# end of game is determined
 def winner(gameResources):
     players = gameResources["players"]
     numPlayers = gameResources["numPlayers"]
-    for i in range(0, numPlayers)
+    for i in range(0, numPlayers):
+        if len(players[i].hand) == 0:
+            gameResources["hasCards"] = False
+    gameResources["emptyHand"] = not gameResources["hasCards"]
+
+# winner is printed
+def printWinner(gameResources):
+    d = gameResources["dealer"]
+    players = gameResources["players"]
+    numPlayers = gameResources["numPlayers"]
+    for i in range(0, numPlayers):
         if(len(d.deck.cards) <= 0):
             print("The game is a tie!")
             break
