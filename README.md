@@ -18,3 +18,10 @@ Project code located in *project* directory
 3. Run command ***python3 RunGame.py*** in the terminal.
 4. Type the name of the game you wish to play and press Enter on your keyboard.
 
+# Project Changes Step 2
+1. FSM implementation of War and Bartok
+2. Refactor of code in Card.py that had 4 previous duplicates as mentioned in project feedback google doc
+3. Removal of War.py, Bartok.py, HandWar.py, HandBartok.py
+4. RunGame.py added, user can now choose to play War or Bartok from console
+5. DealHand function added to Dealer.py instead of being separated in Bartok and War
+6. All classes general except for BartokRules.py and WarRules.py
