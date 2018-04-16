@@ -107,8 +107,6 @@ class WarMachine():
         winnerT.addactions(winner)
         pickWinner.addtransition(winnerT)
         #round end transitions
-        for k, v in self.gameResources.items():
-            print(k, v)
         endGameT = Transition( self.gameResources["emptyHand"], end, "emptyHand")
         endGameT.addactions(printWinner)
         roundEnd.addtransition(endGameT)
@@ -128,10 +126,12 @@ class BartokMachine():
         self.gameResources["isTie"] = False
         self.gameResources["hasCards"] = True
         self.gameResources["emptyHand"] = False
+        self.gameResources["nextround"] = True
         self.run()
     def run(self):
         start = Start("start", self.gameResources)
         roundSetUp = State("roundsetup", self.gameResources)
+        newRound = State("newround", self.gameResources)
         playerTurn = State("playerturn", self.gameResources)
         pickWinner = State("pickwinner", self.gameResources)
         roundEnd = State("roundend", self.gameResources, True)
@@ -144,12 +144,17 @@ class BartokMachine():
         setupT.addactions(setUp)
         start.addtransition(setupT)
         #round set up transitions
-        roundSetUpT = Transition(True, playerTurn)
+        roundSetUpT = Transition(True, newRound)
         roundSetUpT.addactions(setUpRound)
         roundSetUp.addtransition(roundSetUpT)
         #new round transitions
-        playerTurnT = Transition(True, pickWinner) 
-        playerTurnT.addactions(incrementRound)
+        newRoundT = Transition(self.gameResources["nextround"], playerTurn) 
+        newRoundT.addactions(incrementRound)
+        newRound.addtransition(newRoundT)
+        nextPlayerT = Transition(True, playerTurn)
+        newRound.addtransition(nextPlayerT)
+        #player turn transitions
+        playerTurnT = Transition(True, pickWinner)
         playerTurnT.addactions(printPlayerHand)
         playerTurnT.addactions(playerPicksCard)
         playerTurnT.addactions(playCard)
@@ -160,14 +165,12 @@ class BartokMachine():
         winnerT.addactions(winner)
         pickWinner.addtransition(winnerT)
         #round end transitions
-        for k, v in self.gameResources.items():
-            print(k, v)
         endGameT = Transition( self.gameResources["emptyHand"], end, "emptyHand")
         endGameT.addactions(printWinner)
         roundEnd.addtransition(endGameT)
         isTieT = Transition(self.gameResources["isTie"], playerTurn, "isTie")
         roundEnd.addtransition(isTieT)
-        nextRoundT = Transition(True, playerTurn)
+        nextRoundT = Transition(True, newRound)
         roundEnd.addtransition(playerTurnT)
 
         #setup the fsm

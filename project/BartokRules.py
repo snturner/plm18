@@ -95,7 +95,9 @@ def nextPlayer(gameResources):
     playerNum = gameResources["currentPlayer"]
     if playerNum == (gameResources["numPlayers"] - 1):
         gameResources["currentPlayer"] = 0
+        gameResources["nextround"] = True
     else:
+        gameResources["nextround"] = False
         gameResources["currentPlayer"] += 1
 
 # end of game is determined
