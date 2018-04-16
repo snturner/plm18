@@ -1,4 +1,5 @@
 from WarRules import *
+from BartokRules import *
 from Player import Player
 from Dealer import Dealer
 
@@ -136,6 +137,23 @@ class BartokMachine():
         pickWinner = State("pickwinner", self.gameResources)
         roundEnd = State("roundend", self.gameResources, True)
         end = End("end", self.gameResources,)
+        
+        #transitions
+        #start transitions
+        setupT = Transition(True, roundSetUp)
+        setupT.addactions(printInstruction)
+        setupT.addactions(setUp)
+        start.addtransition(setupT)
+        #round set up transitions
+        roundSetUpT = Transition(True, newRound)
+        roundSetUpT.addactions(setUpRound)
+        roundSetUp.addtransition(roundSetUpT)
+        #new round transitions
+        newRoundT = Transition(True, playerTurn) 
+        newRoundT.addactions(incrementRound)
+        newRound.addtransition(newRoundT)
+        
+        
 
 if  __name__ =='__main__':
     war = WarMachine()

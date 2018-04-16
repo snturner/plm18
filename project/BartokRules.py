@@ -32,6 +32,13 @@ def setUp(gameResources):
     d.dealHand(gameResources["players"], numOfPlayers, 6)
     gameResources["discardList"] = []
     gameResources["discardList"].append(d.dealCard())
+    
+def setUpRound(gameResources):
+    gameResources["round"] = 0
+    
+def incrementRound(gameResources):
+    gameResources["round"] += 1
+    print('---------------------ROUND %d---------------------' % gameResources["round"])
 
 # prints out the next player's start of turn
 def nextPlayer(gameResources, currPlayerNum)
