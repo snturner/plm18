@@ -1,6 +1,5 @@
 from Game import GameType, Answer
-import War
-import Bartok
+import FSM
 
 def runGame():
     playAgain = 'yes'
@@ -13,12 +12,12 @@ def runGame():
                 correctInput = True
                 print("\nBartok is starting up...\nEnjoy your game!")
                 print("------------------------------------------\n")
-                newGame = Bartok.PlayBartok()
+                newGame = FSM.BartokMachine()
             elif cardGame == 'war':
                 correctInput = True
                 print("\nWar is starting up...\nEnjoy your game!")
                 print("------------------------------------------\n")
-                newGame = War.PlayWar()
+                newGame = FSM.WarMachine()
             else:
                 print("Invalid input. Please enter a valid card game.\n")
         playAgain = input("\nWould you like to play another game? (Yes/No)\n").lower()

@@ -59,7 +59,7 @@ class FSM():
             if isinstance(self.currentstate, End):
                 break
 
-class WarM():
+class WarMachine():
     def __init__(self):
         self.gameResources = {}
         #win conditions and round end condition
@@ -119,10 +119,26 @@ class WarM():
 
         #setup the fsm
         fsm = FSM(start)
-        
+
+class BartokMachine():
+    def __init__(self):
+        self.gameResources = {}
+        #win conditions and round end condition
+        self.gameResources["isTie"] = False
+        self.gameResources["hasCards"] = True
+        self.gameResources["emptyHand"] = False
+        self.run()
+    def run(self):
+        start = Start("start", self.gameResources)
+        roundSetUp = State("roundsetup", self.gameResources)
+        newRound = State("newround", self.gameResources)
+        playerTurn = State("playerturn", self.gameResources)
+        pickWinner = State("pickwinner", self.gameResources)
+        roundEnd = State("roundend", self.gameResources, True)
+        end = End("end", self.gameResources,)
 
 if  __name__ =='__main__':
-    war = WarM()
+    war = WarMachine()
     #try:
         #war = WarM()
     #except:
