@@ -80,9 +80,9 @@ def playCard(gameResources):
     d = gameResources["dealer"]
     playerNum = gameResources["currentPlayer"]
     player = gameResources["players"][playerNum]
-    cardToPlay = gameResources["cardpicked"]
     cardnum = gameResources["cardnum"] 
     if cardnum != -1:
+        cardToPlay = gameResources["cardpicked"]
         if Card.compare(cardToPlay.value, gameResources["discardList"][0].value) == 0 or Card.compare(cardToPlay.suit, gameResources["discardList"][0].suit) == 0:
             gameResources["discardList"].insert(0, cardToPlay)
             del player.hand[(cardnum - 1)]
