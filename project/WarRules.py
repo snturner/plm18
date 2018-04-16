@@ -20,7 +20,7 @@ def setUp(gameResources):
     gameResources["players"].append(Player())
     gameResources["cardsinplay"] = []
     d = Dealer()
-    d.dealHand(gameResources["players"], 2, 25)
+    d.dealHand(gameResources["players"], 2, 26)
 
 def setUpRound(gameResources):
     gameResources["round"] = 0
@@ -72,9 +72,15 @@ def winner(gameResources):
             gameResources["isTie"] = True
 
         gameResources["hasCards"]  = (len(p1.hand) != 0) and (len(p2.hand) != 0)
+        gameResources["emptyHand"] = not gameResources["hasCards"]
+        #print(len(p1.hand))
+        #print(len(p2.hand))
+        #print(gameResources["hasCards"])
+        #print(gameResources["emptyHand"])
         
     except IndexError:
         if len(p1.hand) == 0 or len(p2.hand) == 0 :
+            gameResources["emptyHand"] = True
             gameResources["hasCards"] = False
             gameResources["isTie"] = False
 

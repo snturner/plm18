@@ -3,17 +3,22 @@ from Player import Player
 from Dealer import Dealer
 
 class Transition():
-    def __init__(self, guard, end):
+    def __init__(self, guard, end, updateGuard = None):
         self.guard = guard
         self.end   = end
         self.actions = []
-    
+        self.updateGuard = updateGuard
+
     def addactions(self, f):
         self.actions.append(f)
 
+    def update(self, gameResources):
+        if self.updateGuard is not None:
+            self.guard = gameResources[self.updateGuard]
+
 class State():
-    def __init__(self, name, gameResources, onEntry=None):
-        if onEntry is not None: onEntry()
+    def __init__(self, name, gameResources, updateGuard=None):
+        self.updateGuard = updateGuard
         self.gameResources = gameResources
         self.name = name
         self.transitions = []
@@ -24,13 +29,13 @@ class State():
     def step(self):
         for t in self.transitions:
             if t.guard is not None:
+                if self.updateGuard is not None:
+                    t.update(self.gameResources)
                 if(t.guard is True):
                     for action in t.actions:
                         action(self.gameResources)
                     return t.end
-
-    def onEntry(self): pass
-
+ 
 
 class Start(State): pass
 
@@ -57,9 +62,10 @@ class FSM():
 class WarM():
     def __init__(self):
         self.gameResources = {}
+        #win conditions and round end condition
         self.gameResources["isTie"] = False
         self.gameResources["hasCards"] = True
-        #self.gameResources["players"] = []
+        self.gameResources["emptyHand"] = False
         self.run()
 
     def run(self): 
@@ -70,8 +76,8 @@ class WarM():
         player1Turn = State("player1turn", self.gameResources)
         player2Turn = State("player2turn", self.gameResources)
         pickWinner = State("pickwinner", self.gameResources)
-        roundEnd = State("roundend", self.gameResources)
-        end = End("end", self.gameResources)
+        roundEnd = State("roundend", self.gameResources, True)
+        end = End("end", self.gameResources,)
          
         #transitions
         #start transitions
@@ -102,13 +108,13 @@ class WarM():
         #round end transitions
         for k, v in self.gameResources.items():
             print(k, v)
-        isTieT = Transition(self.gameResources["isTie"], player1Turn)
-        roundEnd.addtransition(isTieT)
-        nextRoundT = Transition(self.gameResources["hasCards"], newRound)
-        roundEnd.addtransition(nextRoundT)
-        endGameT = Transition( not self.gameResources["hasCards"], end)
+        endGameT = Transition( self.gameResources["emptyHand"], end, "emptyHand")
         endGameT.addactions(printWinner)
         roundEnd.addtransition(endGameT)
+        isTieT = Transition(self.gameResources["isTie"], player1Turn, "isTie")
+        roundEnd.addtransition(isTieT)
+        nextRoundT = Transition(True, newRound)
+        roundEnd.addtransition(nextRoundT)
 
 
         #setup the fsm
