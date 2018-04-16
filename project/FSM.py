@@ -152,7 +152,13 @@ class BartokMachine():
         newRoundT = Transition(True, playerTurn) 
         newRoundT.addactions(incrementRound)
         newRound.addtransition(newRoundT)
-        
+        #player turn transitions
+        playerTurnT = Transition(True, pickWinner)
+        playerTurnT.addactions(printPlayerHand)
+        playerTurnT.addactions(playerPicksCard)
+        playerTurnT.addactions(playCard)
+        playerTurnT.addactions(nextPlayer)
+        playerTurn.addtransition(playerTurnT)
         
 
 if  __name__ =='__main__':

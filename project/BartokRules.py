@@ -27,7 +27,7 @@ def setUp(gameResources):
     gameResources["numPlayers"] = numOfPlayers
     for i in range(0, numOfPlayers):
         gameResources["players"].append(Player())
-    gameResources["currentPlayer"] = gameResources["players"][0]
+    gameResources["currentPlayer"] = 0
     d = Dealer()
     d.dealHand(gameResources["players"], numOfPlayers, 6)
     gameResources["discardList"] = []
@@ -41,15 +41,20 @@ def incrementRound(gameResources):
     print('---------------------ROUND %d---------------------' % gameResources["round"])
 
 # prints out the next player's start of turn
-def nextPlayer(gameResources, currPlayerNum)
-    gameResources["currentPlayer"] = gameResources["players"][currPlayerNum]
-    print("---------------------PLAYER %d's TURN---------------------" % gameResources["playerNum"])
+def nextPlayer(gameResources)
+    playerNum = gameResources["currentPlayer"]
+    player = gameResources["players"][playerNum]
+    print("---------------------PLAYER %d's TURN---------------------" % (playerNum + 1))
     print("Current card on top: %s" % Card.string(gameResources["discardList"][0]))
     k = 1
-    for card in gameResources["currentPlayer"].hand:
+    for card in player.hand:
         cardStr = Card.string(card)
         print(" %(num)d) %(card)s" % {"num": k, "card":cardStr})
         k += 1
+    if playerNum == gameResources["numPlayers"]:
+        gameResources["currentPlayer"] = 0
+    else:
+        gameResources["currentPlayer"] += 1
 
 # player selects card through command line
 def playerPicksCard(gameResources):
