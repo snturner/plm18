@@ -12,6 +12,19 @@ Transcripts located in *project/transcript* directory
 
 Project code located in *project* directory
 
+# Proj 1 Step 2
+Transcripts located in *project/transcript* directory
+
+**Bartok transcripts:**
+game1eg1_step2.txt
+game1eg2_step2.txt
+
+**War transcripts:**
+game2eg1_step2.txt
+game2eg2_step2.txt
+
+Project code located in *project* directory
+
 # To Run
 1. Download all files from *project* folder.
 2. Open a terminal and change directory to *project* folder.
