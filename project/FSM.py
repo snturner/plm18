@@ -1,5 +1,5 @@
-from WarRules import *
-from BartokRules import *
+import WarRules
+import BartokRules
 from Player import Player
 from Dealer import Dealer
 
@@ -83,32 +83,32 @@ class WarMachine():
         #transitions
         #start transitions
         setupT = Transition(True, roundSetUp)
-        setupT.addactions(printInstruction)
-        setupT.addactions(setUp)
+        setupT.addactions(WarRules.printInstruction)
+        setupT.addactions(WarRules.setUp)
         start.addtransition(setupT)
         #round set up transitions
         roundSetUpT = Transition(True, newRound)
-        roundSetUpT.addactions(setUpRound)
+        roundSetUpT.addactions(WarRules.setUpRound)
         roundSetUp.addtransition(roundSetUpT)
         #new round transitions
         newRoundT = Transition(True, player1Turn)
-        newRoundT.addactions(incrementRound)
+        newRoundT.addactions(WarRules.incrementRound)
         newRound.addtransition(newRoundT)
         #player 1 turn transitions
         player1T = Transition(True,player2Turn)
-        player1T.addactions(player1PlaysCard)
+        player1T.addactions(WarRules.player1PlaysCard)
         player1Turn.addtransition(player1T)
         #player 2 turn transitions
         player2T = Transition(True,pickWinner)
-        player2T.addactions(player2PlaysCard)
+        player2T.addactions(WarRules.player2PlaysCard)
         player2Turn.addtransition(player2T)
         #pick winner transitions
         winnerT = Transition(True, roundEnd)
-        winnerT.addactions(winner)
+        winnerT.addactions(WarRules.winner)
         pickWinner.addtransition(winnerT)
         #round end transitions
         endGameT = Transition( self.gameResources["emptyHand"], end, "emptyHand")
-        endGameT.addactions(printWinner)
+        endGameT.addactions(WarRules.printWinner)
         roundEnd.addtransition(endGameT)
         isTieT = Transition(self.gameResources["isTie"], player1Turn, "isTie")
         roundEnd.addtransition(isTieT)
@@ -140,33 +140,33 @@ class BartokMachine():
         #transitions
         #start transitions
         setupT = Transition(True, roundSetUp)
-        setupT.addactions(printInstruction)
-        setupT.addactions(setUp)
+        setupT.addactions(BartokRules.printInstruction)
+        setupT.addactions(BartokRules.setUp)
         start.addtransition(setupT)
         #round set up transitions
         roundSetUpT = Transition(True, newRound)
-        roundSetUpT.addactions(setUpRound)
+        roundSetUpT.addactions(BartokRules.setUpRound)
         roundSetUp.addtransition(roundSetUpT)
         #new round transitions
         newRoundT = Transition(self.gameResources["nextround"], playerTurn) 
-        newRoundT.addactions(incrementRound)
+        newRoundT.addactions(BartokRules.incrementRound)
         newRound.addtransition(newRoundT)
         nextPlayerT = Transition(True, playerTurn)
         newRound.addtransition(nextPlayerT)
         #player turn transitions
         playerTurnT = Transition(True, pickWinner)
-        playerTurnT.addactions(printPlayerHand)
-        playerTurnT.addactions(playerPicksCard)
-        playerTurnT.addactions(playCard)
-        playerTurnT.addactions(nextPlayer)
+        playerTurnT.addactions(BartokRules.printPlayerHand)
+        playerTurnT.addactions(BartokRules.playerPicksCard)
+        playerTurnT.addactions(BartokRules.playCard)
+        playerTurnT.addactions(BartokRules.nextPlayer)
         playerTurn.addtransition(playerTurnT)
         #determine winner transitions
         winnerT = Transition(True, roundEnd)
-        winnerT.addactions(winner)
+        winnerT.addactions(BartokRules.winner)
         pickWinner.addtransition(winnerT)
         #round end transitions
         endGameT = Transition( self.gameResources["emptyHand"], end, "emptyHand")
-        endGameT.addactions(printWinner)
+        endGameT.addactions(BartokRules.printWinner)
         roundEnd.addtransition(endGameT)
         isTieT = Transition(self.gameResources["isTie"], playerTurn, "isTie")
         roundEnd.addtransition(isTieT)
@@ -175,12 +175,3 @@ class BartokMachine():
 
         #setup the fsm
         fsm = FSM(start)
-
-if  __name__ =='__main__':
-    war = WarMachine()
-    #try:
-        #war = WarM()
-    #except:
-        #print("\n\nGame Ended unexpectedly.\n")
-        #Logger.close()
-        #exit()
