@@ -1,5 +1,7 @@
 import WarRules
 import BartokRules
+import LingerLongerRules
+import MyShipSailsRules
 from Player import Player
 from Dealer import Dealer
 
@@ -162,3 +164,34 @@ class BartokMachine():
 
         #setup the fsm
         fsm = FSM(start)
+
+class LingerLongerMachine():
+    def __init__(self):
+        self.gameResources = {}
+        #win conditions and round end condition
+        self.gameResources["isTie"] = False
+        self.gameResources["hasCards"] = True
+        self.gameResources["emptyHand"] = False
+        self.run()
+    def run(self):
+        start = Start("start", self.gameResources)
+        playerTurn = State("playerturn", self.gameResources)
+        pickWinner = State("pickwinner", self.gameResources)
+        roundEnd = State("roundend", self.gameResources, True)
+        end = End("end", self.gameResources,)
+
+class MyShipSailsMachine():
+    def __init__(self):
+        self.gameResources = {}
+        #win conditions and round end condition
+        self.gameResources["isTie"] = False
+        self.gameResources["hasCards"] = True
+        self.gameResources["emptyHand"] = False
+        self.run()
+    def run(self):
+        start = Start("start", self.gameResources)
+        playerTurn = State("playerturn", self.gameResources)
+        pickWinner = State("pickwinner", self.gameResources)
+        roundEnd = State("roundend", self.gameResources, True)
+        end = End("end", self.gameResources,)
+        
