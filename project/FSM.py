@@ -126,12 +126,9 @@ class BartokMachine():
         self.gameResources["isTie"] = False
         self.gameResources["hasCards"] = True
         self.gameResources["emptyHand"] = False
-        self.gameResources["nextround"] = True
         self.run()
     def run(self):
         start = Start("start", self.gameResources)
-        roundSetUp = State("roundsetup", self.gameResources)
-        newRound = State("newround", self.gameResources)
         playerTurn = State("playerturn", self.gameResources)
         pickWinner = State("pickwinner", self.gameResources)
         roundEnd = State("roundend", self.gameResources, True)
@@ -139,20 +136,10 @@ class BartokMachine():
         
         #transitions
         #start transitions
-        setupT = Transition(True, roundSetUp)
+        setupT = Transition(True, playerTurn)
         setupT.addactions(BartokRules.printInstruction)
         setupT.addactions(BartokRules.setUp)
         start.addtransition(setupT)
-        #round set up transitions
-        roundSetUpT = Transition(True, newRound)
-        roundSetUpT.addactions(BartokRules.setUpRound)
-        roundSetUp.addtransition(roundSetUpT)
-        #new round transitions
-        newRoundT = Transition(self.gameResources["nextround"], playerTurn) 
-        newRoundT.addactions(BartokRules.incrementRound)
-        newRound.addtransition(newRoundT)
-        nextPlayerT = Transition(True, playerTurn)
-        newRound.addtransition(nextPlayerT)
         #player turn transitions
         playerTurnT = Transition(True, pickWinner)
         playerTurnT.addactions(BartokRules.printPlayerHand)
@@ -170,7 +157,7 @@ class BartokMachine():
         roundEnd.addtransition(endGameT)
         isTieT = Transition(self.gameResources["isTie"], playerTurn, "isTie")
         roundEnd.addtransition(isTieT)
-        nextRoundT = Transition(True, newRound)
+        nextRoundT = Transition(True, playerTurn)
         roundEnd.addtransition(playerTurnT)
 
         #setup the fsm

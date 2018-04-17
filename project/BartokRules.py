@@ -37,13 +37,6 @@ def setUp(gameResources):
     gameResources["discardList"].append(d.dealCard())
     gameResources["gameOver"] = False
     
-def setUpRound(gameResources):
-    gameResources["round"] = 0
-    
-def incrementRound(gameResources):
-    gameResources["round"] += 1
-    print('---------------------ROUND %d---------------------' % gameResources["round"])
-
 # prints out the player's start of turn
 def printPlayerHand(gameResources):
     playerNum = gameResources["currentPlayer"]
@@ -95,9 +88,7 @@ def nextPlayer(gameResources):
     playerNum = gameResources["currentPlayer"]
     if playerNum == (gameResources["numPlayers"] - 1):
         gameResources["currentPlayer"] = 0
-        gameResources["nextround"] = True
     else:
-        gameResources["nextround"] = False
         gameResources["currentPlayer"] += 1
 
 # end of game is determined
