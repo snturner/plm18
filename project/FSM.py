@@ -185,7 +185,7 @@ class MyShipSailsMachine():
         self.gameResources = {}
         #win conditions and round end condition
         self.gameResources["isTie"] = False
-        self.gameResources["hasCards"] = True
+        self.gameResources["hasSuit"] = False
         self.gameResources["emptyHand"] = False
         self.run()
     def run(self):
