@@ -1,13 +1,11 @@
 # Abstracted class
-
 import Card
-class Player:
+class AIPlayer:
 	
 	def __init__(self):
 		self.x = 2
 		self.hand = []
 		self.players = []
-		self.isAI = False
 		
 	def isDraw(self, cardsList, pile):
 		self.x = 3

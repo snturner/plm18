@@ -1,5 +1,6 @@
 import WarRules
 import BartokRules
+import LingerLongerRules
 from Player import Player
 from Dealer import Dealer
 
@@ -162,3 +163,58 @@ class BartokMachine():
 
         #setup the fsm
         fsm = FSM(start)
+
+class LingerLongerMachine():
+    def __init__(self):
+        self.gameResources = {}
+        #win conditions and round end condition
+        self.gameResources["emptyHand"] = False
+        self.gameResources["roundIsNotOver"] = True
+        self.gameResources["roundOver"] = True
+        self.gameResources["emptydeck"] = False
+        self.run()
+
+    def run(self):
+        #states
+        start = Start("start", self.gameResources)
+        roundSetUp = State("roundsetup", self.gameResources)
+        newRound = State("newround", self.gameResources)
+        playerTurn = State("playerturn", self.gameResources, True)
+        pickWinner = State("pickWinner", self.gameResources, True)
+        end = End("end", self.gameResources,)
+
+        #transitions
+        #start transitions
+        setupT = Transition(True, roundSetUp)
+        setupT.addactions(LingerLongerRules.printInstruction)
+        setupT.addactions(LingerLongerRules.setUp)
+        start.addtransition(setupT)
+        #round set up transitions
+        roundSetUpT = Transition(True, newRound)
+        roundSetUpT.addactions(LingerLongerRules.setUpRound)
+        roundSetUp.addtransition(roundSetUpT)
+        #new round transitions
+        newRoundT = Transition(True, playerTurn)
+        newRoundT.addactions(LingerLongerRules.incrementRound)
+        newRound.addtransition(newRoundT)
+        #player turn transitions
+        playerT = Transition(self.gameResources["roundIsNotOver"], playerTurn, "roundIsNotOver")
+        playerT.addactions(LingerLongerRules.playCard)
+        roundendT = Transition(True, pickWinner)
+        playerTurn.addtransition(playerT)
+        playerTurn.addtransition(roundendT)
+        #pick Winner Transitions
+        playerwinsgameT = Transition(self.gameResources["emptyHand"], end, "emptyHand")
+        playerwinsgameT.addactions(LingerLongerRules.winner)
+        playerwinsgameT = Transition(self.gameResources["emptydeck"], end, "emptydeck")
+        playerwinsgameT.addactions(LingerLongerRules.winner)
+        playerwinsroundT = Transition(True, newRound)
+        playerwinsroundT.addactions(LingerLongerRules.roundEnd)
+        pickWinner.addtransition(playerwinsgameT)
+        pickWinner.addtransition(playerwinsroundT)
+
+        #setup the fsm
+        fsm = FSM(start)
+
+if __name__ == "__main__":
+    machine = LingerLongerMachine()
