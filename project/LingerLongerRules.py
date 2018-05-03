@@ -6,6 +6,13 @@ def printInstruction(gameResources):
     '''Starts game and shows welcome message and rules'''
     print('Welcome to Linger Longer!')
     print('This is a 4 person game with 1 human player and 3 AI players')
+    print('The game starts with a trump suit')
+    print('Each player is given 4 cards')
+    print("Player 1 plays a card in the beginning of the round and then player 2 and so forth")
+    print('Player wins a round by playing the higest value card that is a trump suit')
+    print('If no card with a trump suit is played, then the highest value card wins')
+    print("Everybody but the winner of a round draws a card at the end of the turn")
+    print("Win the game by running out cards in your hand or by having the least amount of cards when the deck runs out cards")
 
 #creates players and deals cards to the players
 def setUp(gameResources):
