@@ -216,5 +216,5 @@ class LingerLongerMachine():
         #setup the fsm
         fsm = FSM(start)
 
-if __name__ == "__main__":
-    machine = LingerLongerMachine()
+# if __name__ == "__main__":
+#     machine = LingerLongerMachine()
