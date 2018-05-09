@@ -15,6 +15,10 @@ Project code located in *project* directory
 # Proj 1 Step 2
 Transcripts located in *project/transcript* directory
 
+# Bonus Games
+Transcripts located in *project/transcript* directory
+Added AI players to each game.
+
 **Bartok transcripts:**
 game1eg1_step2.txt
 game1eg2_step2.txt
@@ -22,6 +26,14 @@ game1eg2_step2.txt
 **War transcripts:**
 game2eg1_step2.txt
 game2eg2_step2.txt
+
+**Linger Longer transcripts:**
+game3eg1.txt
+game3eg2.txt
+
+**My Ship Sails transcripts:**
+game4eg1.txt
+game4eg2.txt
 
 Project code located in *project* directory
 
