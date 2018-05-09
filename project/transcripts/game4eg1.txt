@@ -1,0 +1,104 @@
+python3 RunGame.py
+------------------------------------------
+Choose the game you would like to play:
+Choices: Bartok <----> War <----> My Ship Sails <----> Linger Longer
+my ship sails
+
+My Ship Sails is starting up...
+Enjoy your game!
+------------------------------------------
+
+Rules of My Ship Sails:
+
+There is one player and three AI players.
+Players receive 7 cards from the dealer to start. The
+rest of the deck is then discarded.
+The goal of the game is to be the first player to have
+a hand with seven cards all of the same suit.
+Gameplay begins with the first player giving a card of
+their choosing to the next player. Then the next player
+gives an unwanted card to the next player, and so on.
+The game is won by the player who has seven cards all
+with the same suit.
+---------------------ROUND 1---------------------
+---------------------PLAYER 1's TURN---------------------
+ 1) 5 of SPADES
+ 2) 4 of HEARTS
+ 3) ACE of SPADES
+ 4) 8 of SPADES
+ 5) JACK of CLUBS
+ 6) KING of DIAMONDS
+ 7) 3 of CLUBS
+Enter desired card position to give away:
+2
+Player 1 gave player 2 a card.
+Player 2 gave player 3 a card.
+Player 3 gave player 4 a card.
+
+Player 4 gave you a 2 of SPADES.
+---------------------ROUND 2---------------------
+---------------------PLAYER 1's TURN---------------------
+ 1) 5 of SPADES
+ 2) ACE of SPADES
+ 3) 8 of SPADES
+ 4) JACK of CLUBS
+ 5) KING of DIAMONDS
+ 6) 3 of CLUBS
+ 7) 2 of SPADES
+Enter desired card position to give away:
+4
+Player 1 gave player 2 a card.
+Player 2 gave player 3 a card.
+Player 3 gave player 4 a card.
+
+Player 4 gave you a 7 of SPADES.
+---------------------ROUND 3---------------------
+---------------------PLAYER 1's TURN---------------------
+ 1) 5 of SPADES
+ 2) ACE of SPADES
+ 3) 8 of SPADES
+ 4) KING of DIAMONDS
+ 5) 3 of CLUBS
+ 6) 2 of SPADES
+ 7) 7 of SPADES
+Enter desired card position to give away:
+4
+Player 1 gave player 2 a card.
+Player 2 gave player 3 a card.
+Player 3 gave player 4 a card.
+
+Player 4 gave you a QUEEN of SPADES.
+---------------------ROUND 4---------------------
+---------------------PLAYER 1's TURN---------------------
+ 1) 5 of SPADES
+ 2) ACE of SPADES
+ 3) 8 of SPADES
+ 4) 3 of CLUBS
+ 5) 2 of SPADES
+ 6) 7 of SPADES
+ 7) QUEEN of SPADES
+Enter desired card position to give away:
+4
+Player 1 gave player 2 a card.
+Player 2 gave player 3 a card.
+Player 3 gave player 4 a card.
+
+Player 4 gave you a 4 of SPADES.
+---------------------ROUND 5---------------------
+---------------------PLAYER 1's TURN---------------------
+ 1) 5 of SPADES
+ 2) ACE of SPADES
+ 3) 8 of SPADES
+ 4) 2 of SPADES
+ 5) 7 of SPADES
+ 6) QUEEN of SPADES
+ 7) 4 of SPADES
+Enter desired card position to give away:
+1
+Player 1 wins!
+
+Would you like to play another game? (Yes/No)
+no
+
+System exiting...
+Thank you for playing!
