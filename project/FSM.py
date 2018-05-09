@@ -207,11 +207,12 @@ class LingerLongerMachine():
         #pick Winner Transitions
         playerwinsgameT = Transition(self.gameResources["emptyHand"], end, "emptyHand")
         playerwinsgameT.addactions(LingerLongerRules.winner)
-        playerwinsgameT = Transition(self.gameResources["emptydeck"], end, "emptydeck")
+        deckemptyT = Transition(self.gameResources["emptydeck"], end, "emptydeck")
         playerwinsgameT.addactions(LingerLongerRules.winner)
         playerwinsroundT = Transition(True, newRound)
         playerwinsroundT.addactions(LingerLongerRules.roundEnd)
         pickWinner.addtransition(playerwinsgameT)
+        pickWinner.addtransition(deckemptyT)
         pickWinner.addtransition(playerwinsroundT)
 
         #setup the fsm

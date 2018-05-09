@@ -5,14 +5,17 @@ from Card import Card
 def printInstruction(gameResources):
     '''Starts game and shows welcome message and rules'''
     print('Welcome to Linger Longer!')
-    print('This is a 4 person game with 1 human player and 3 AI players')
-    print('The game starts with a trump suit')
-    print('Each player is given 4 cards')
-    print("Player 1 plays a card in the beginning of the round and then player 2 and so forth")
-    print('Player wins a round by playing the higest value card that is a trump suit')
-    print('If no card with a trump suit is played, then the highest value card wins')
-    print("Everybody but the winner of a round draws a card at the end of the turn")
-    print("Win the game by running out cards in your hand or by having the least amount of cards when the deck runs out cards")
+    print('This is a 4 person game with 1 human player and 3 AI players.')
+    print('The game starts with a trump suit.')
+    print('Each player is given 4 cards.')
+    print('Player 1 plays a card in the beginning of the round and then')
+    print('player 2 does next and so on. Player wins a round by playing')
+    print('the highest value card that is a trump suit.')
+    print('If no card with a trump suit is played, then the highest value')
+    print('card wins. Everybody but the winner of a round draws a card at')
+    print('the end of the turn.')
+    print('Win the game by running out cards in your hand or by having the')
+    print('least amount of cards when the deck runs out cards.')
 
 #creates players and deals cards to the players
 def setUp(gameResources):
@@ -39,7 +42,11 @@ def incrementRound(gameResources):
     gameResources["currentPlayer"] = 0
     gameResources["roundIsNotOver"] = True
     gameResources["round"] += 1
+    print()
     print('---------------------ROUND %d---------------------' % gameResources["round"])
+    for i in range(1,4):
+        print("AI Player %(num)d has %(cNum)d cards" % {"num": (i+1), "cNum":len(gameResources["players"][i].hand)})
+    print()
     print('The trump suit is %s' % Card.SUITS[gameResources["trumpsuit"] - 1])
 
 
@@ -54,62 +61,72 @@ def playCard(gameResources):
             k += 1
         while True:
             try:
-                print("Enter desired card position to play (enter -1 to draw):")
+                print("Enter desired card position to play:")
                 cardnum = int(input())
-                if cardnum == -1:
-                    print("Player %(num)d draws a card"% {"num": (gameResources["currentPlayer"] + 1)})
-                    player.hand.append(d.dealCard())
-                else:
-                    gameResources["cardsinplay"].append(player.hand[(cardnum - 1)])
-                    print("You play %(card)s" % { "card":Card.string(player.hand[(cardnum - 1)])})
-                    player.hand.pop(cardnum - 1)
-                    gameResources["playerindex"].append(gameResources["currentPlayer"])
+                gameResources["cardsinplay"].append(player.hand[(cardnum - 1)])
+                print("You play %(card)s" % { "card":Card.string(player.hand[(cardnum - 1)])})
+                del player.hand[(cardnum - 1)]
+                gameResources["playerindex"].append(gameResources["currentPlayer"])
                 break
             except: 
                 print("Invalid number")
+        if len(player.hand) <= 0:
+            gameResources["emptyHand"] = True
     #the ai moves
     if gameResources["currentPlayer"] >= 1:
         if gameResources["currentPlayer"] == 3:
             gameResources["roundIsNotOver"] = False
         player = gameResources["players"][gameResources["currentPlayer"]]
-        index = next((i for i, card in enumerate(player.hand) if card.suit == gameResources["trumpsuit"]), -1)
-        if index == -1:
-            for x in range(0, len(gameResources["cardsinplay"])):
-                for y in range(0, len(player.hand)):
-                    if player.hand[y].value >= gameResources["cardsinplay"][x].value:
-                        index = y
-
-        if index == -1:
-            print("AI Player %(num)d draws a card"% {"num": (gameResources["currentPlayer"] + 1)})
-            player.hand.append(d.dealCard())
-        else:
+        try:
+            highest = player.hand[0]
+            index = 0
+            for i, card in enumerate(player.hand):
+                if card.suit == gameResources["trumpsuit"] and (card.value > highest.value or highest.suit != gameResources["trumpsuit"]):
+                    highest = card
+                    index = i
+                elif card.suit != gameResources["trumpsuit"]:
+                    if highest.suit != gameResources["trumpsuit"] and card.value > highest.value:
+                        highest = card
+                        index = i
             gameResources["cardsinplay"].append(player.hand[index])
             print("AI Player %(num)d plays %(card)s" % { "num": (gameResources["currentPlayer"] + 1), "card":Card.string(player.hand[index])})
-            player.hand.pop(index)
+            del player.hand[index]
             gameResources["playerindex"].append(gameResources["currentPlayer"])
-    gameResources["currentPlayer"] += 1
-    for i in range(0, 4):
-        if len(gameResources["players"][i].hand) <= 0:
+        except IndexError:
+            print("AI Player %(num)d has no cards left to play" % { "num": (gameResources["currentPlayer"] + 1)})
+        if len(player.hand) <= 0:
             gameResources["emptyHand"] = True
+    gameResources["currentPlayer"] += 1
     if len(d.deck.cards) <= 4:
         gameResources["emptydeck"] = True 
 
 def roundEnd(gameResources):
     d = gameResources["dealer"]
-    index = next((i for i, card in enumerate(gameResources["cardsinplay"]) if card.suit == gameResources["trumpsuit"]), -1)
-    if not index ==  -1:
-        for x in range(0, len(gameResources["cardsinplay"])):
-            for y in range(0, len(gameResources["cardsinplay"])):
-                if gameResources["cardsinplay"][y].value >= gameResources["cardsinplay"][x].value:
-                    index = y
-        print("Player %(num)d wins the round and all other players draw a card"% {"num": gameResources["playerindex"][index]})
+    highest = gameResources["cardsinplay"][0]
+    index = 1
+    for i, card in enumerate(gameResources["cardsinplay"]):
+        if card.suit == gameResources["trumpsuit"] and (card.value > highest.value or highest.suit != gameResources["trumpsuit"]):
+            highest = card
+            index = i+1
+        elif card.suit != gameResources["trumpsuit"]:
+            if highest.suit != gameResources["trumpsuit"] and card.value > highest.value:
+                highest = card
+                index = i+1
+        
+    # index = next((i for i, card in enumerate(gameResources["cardsinplay"]) if card.suit == gameResources["trumpsuit"]), -1)
+    if index !=  -1:
+        # for x in range(0, len(gameResources["cardsinplay"])):
+            # for y in range(0, len(gameResources["cardsinplay"])):
+                # if gameResources["cardsinplay"][y].value >= gameResources["cardsinplay"][x].value:
+                    # index = y
+        print("Player %(num)d wins the round and all other players draw a card"% {"num": index})
         for i in range(0, 4):
-            if not i == index:
+            if i != (index - 1):
                 gameResources["players"][i].hand.append(d.dealCard())
     else:
-        print("Player %(num)d wins the round and all other players draw a card"% {"num": gameResources["playerindex"][index]})
+        print("Player %(num)d wins the round and all other players draw a card"% {"num": index})
         for i in range(0, 4):
-            if not i == index:
+            if i != (index - 1):
                 gameResources["players"][i].hand.append(d.dealCard())
 
 
@@ -120,11 +137,11 @@ def winner(gameResources):
         for i in range(0, 4):
             if len(gameResources["players"][i].hand) <= handsize:
                 index = i
-        print("Player %(num)d wins the game because they have the least cards" % {"num": i})
+        print("Player %(num)d wins the game because they have the least cards" % {"num": (i + 1)})
     else:
         for i in range(0, 4):
             if len(gameResources["players"][i].hand) <= 0:
-                print("Player %(num)d has ran out of cards and won the game" % {"num": i})
+                print("Player %(num)d has ran out of cards and won the game" % {"num": (i + 1)})
 
 
 
