@@ -19,6 +19,7 @@ Transcripts located in *project/transcript* directory
 Transcripts located in *project/transcript* directory
 Added AI players to each game.
 
+# All Transcripts
 **Bartok transcripts:**
 game1eg1_step2.txt
 game1eg2_step2.txt
