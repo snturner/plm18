@@ -1,6 +1,7 @@
 import WarRules
 import BartokRules
 import LingerLongerRules
+import MyShipSailsRules
 from Player import Player
 from Dealer import Dealer
 
@@ -212,6 +213,60 @@ class LingerLongerMachine():
         playerwinsroundT.addactions(LingerLongerRules.roundEnd)
         pickWinner.addtransition(playerwinsgameT)
         pickWinner.addtransition(playerwinsroundT)
+
+        #setup the fsm
+        fsm = FSM(start)
+
+class MyShipSailsMachine():
+    def __init__(self):
+        self.gameResources = {}
+        #win conditions and round end condition
+        self.gameResources["turnIsNotOver"] = True
+        self.gameResources["roundIsNotOver"] = True
+        self.gameResources["hasSuit"] = False
+        self.gameResources["gameOver"] = False
+        self.run()
+
+    def run(self):
+        #states
+        start = Start("start", self.gameResources)
+        roundSetUp = State("roundsetup", self.gameResources)
+        newRound = State("newround", self.gameResources)
+        playerTurn = State("playerturn", self.gameResources, True)
+        pickWinner = State("pickWinner", self.gameResources, True)
+        end = End("end", self.gameResources,)
+
+        #transitions
+        #start transitions
+        setupT = Transition(True, roundSetUp)
+        setupT.addactions(MyShipSailsRules.printInstruction)
+        setupT.addactions(MyShipSailsRules.setUp)
+        start.addtransition(setupT)
+        #round set up transitions
+        roundSetUpT = Transition(True, newRound)
+        roundSetUpT.addactions(MyShipSailsRules.setUpRound)
+        roundSetUp.addtransition(roundSetUpT)
+        #new round transitions
+        newRoundT = Transition(True, playerTurn)
+        newRoundT.addactions(MyShipSailsRules.incrementRound)
+        newRound.addtransition(newRoundT)
+        #player turn transitions
+        playerT = Transition(self.gameResources["turnIsNotOver"], playerTurn, "turnIsNotOver")
+        playerT.addactions(MyShipSailsRules.printPlayerHand)
+        playerT.addactions(MyShipSailsRules.checkHand)
+        playerT.addactions(MyShipSailsRules.playerPicksCard)
+        roundendT = Transition(True, pickWinner)
+        playerTurn.addtransition(playerT)
+        playerTurn.addtransition(roundendT)
+        #pick Winner Transitions
+        playerwinsgameT = Transition(self.gameResources["gameOver"], end, "gameOver")
+        playerwinsgameT.addactions(MyShipSailsRules.winner)
+        nextplayerT = Transition(self.gameResources["roundIsNotOver"], playerTurn, "roundIsNotOver")
+        nextplayerT.addactions(MyShipSailsRules.nextPlayer)
+        nextroundT = Transition(True, newRound)
+        pickWinner.addtransition(playerwinsgameT)
+        pickWinner.addtransition(nextplayerT)
+        pickWinner.addtransition(nextroundT)
 
         #setup the fsm
         fsm = FSM(start)

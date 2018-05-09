@@ -47,7 +47,6 @@ def playCard(gameResources):
     d = gameResources["dealer"]
     if gameResources["currentPlayer"] == 0:
         player = gameResources["players"][0]
-        print('The trump suit is %s' % Card.SUITS[gameResources["trumpsuit"] - 1])
         k = 1
         for card in player.hand:
             cardStr = Card.string(card)
