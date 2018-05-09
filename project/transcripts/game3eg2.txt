@@ -1,0 +1,130 @@
+python3 RunGame.py
+------------------------------------------
+Choose the game you would like to play:
+Choices: Bartok <----> War <----> My Ship Sails <----> Linger Longer
+linger longer
+
+Linger Longer is starting up...
+Enjoy your game!
+------------------------------------------
+
+Welcome to Linger Longer!
+This is a 4 person game with 1 human player and 3 AI players.
+The game starts with a trump suit.
+Each player is given 4 cards.
+Player 1 plays a card in the beginning of the round and then
+player 2 does next and so on. Player wins a round by playing
+the highest value card that is a trump suit.
+If no card with a trump suit is played, then the highest value
+card wins. Everybody but the winner of a round draws a card at
+the end of the turn.
+Win the game by running out cards in your hand or by having the
+least amount of cards when the deck runs out cards.
+
+---------------------ROUND 1---------------------
+AI Player 2 has 4 cards
+AI Player 3 has 4 cards
+AI Player 4 has 4 cards
+
+The trump suit is SPADES
+ 1) ACE of DIAMONDS
+ 2) 4 of DIAMONDS
+ 3) 10 of CLUBS
+ 4) ACE of CLUBS
+Enter desired card position to play:
+4
+You play ACE of CLUBS
+AI Player 2 plays QUEEN of HEARTS
+AI Player 3 plays 9 of SPADES
+AI Player 4 plays 7 of SPADES
+Player 3 wins the round and all other players draw a card
+
+---------------------ROUND 2---------------------
+AI Player 2 has 4 cards
+AI Player 3 has 3 cards
+AI Player 4 has 4 cards
+
+The trump suit is SPADES
+ 1) ACE of DIAMONDS
+ 2) 4 of DIAMONDS
+ 3) 10 of CLUBS
+ 4) 9 of HEARTS
+Enter desired card position to play:
+1
+You play ACE of DIAMONDS
+AI Player 2 plays 8 of HEARTS
+AI Player 3 plays KING of DIAMONDS
+AI Player 4 plays KING of CLUBS
+Player 1 wins the round and all other players draw a card
+
+---------------------ROUND 3---------------------
+AI Player 2 has 4 cards
+AI Player 3 has 3 cards
+AI Player 4 has 4 cards
+
+The trump suit is SPADES
+ 1) 4 of DIAMONDS
+ 2) 10 of CLUBS
+ 3) 9 of HEARTS
+Enter desired card position to play:
+2
+You play 10 of CLUBS
+AI Player 2 plays 7 of HEARTS
+AI Player 3 plays ACE of HEARTS
+AI Player 4 plays 10 of HEARTS
+Player 3 wins the round and all other players draw a card
+
+---------------------ROUND 4---------------------
+AI Player 2 has 4 cards
+AI Player 3 has 2 cards
+AI Player 4 has 4 cards
+
+The trump suit is SPADES
+ 1) 4 of DIAMONDS
+ 2) 9 of HEARTS
+ 3) JACK of SPADES
+Enter desired card position to play:
+3
+You play JACK of SPADES
+AI Player 2 plays 6 of HEARTS
+AI Player 3 plays 6 of CLUBS
+AI Player 4 plays KING of HEARTS
+Player 1 wins the round and all other players draw a card
+
+---------------------ROUND 5---------------------
+AI Player 2 has 4 cards
+AI Player 3 has 2 cards
+AI Player 4 has 4 cards
+
+The trump suit is SPADES
+ 1) 4 of DIAMONDS
+ 2) 9 of HEARTS
+Enter desired card position to play:
+2
+You play 9 of HEARTS
+AI Player 2 plays 5 of CLUBS
+AI Player 3 plays 5 of DIAMONDS
+AI Player 4 plays 9 of DIAMONDS
+Player 1 wins the round and all other players draw a card
+
+---------------------ROUND 6---------------------
+AI Player 2 has 4 cards
+AI Player 3 has 2 cards
+AI Player 4 has 4 cards
+
+The trump suit is SPADES
+ 1) 4 of DIAMONDS
+Enter desired card position to play:
+1
+You play 4 of DIAMONDS
+AI Player 2 plays 4 of SPADES
+AI Player 3 plays 2 of SPADES
+AI Player 4 plays KING of SPADES
+Player 1 has ran out of cards and won the game
+Player 1 has ran out of cards and won the game
+
+Would you like to play another game? (Yes/No)
+no
+
+System exiting...
+Thank you for playing!
